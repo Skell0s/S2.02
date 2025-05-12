@@ -107,7 +107,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             Repartition repartition = new Repartition(jeuTest);
             foreach (var equipe in equipes)
             {
-                //if () 
+                //if (400) 
                 //{ }
                 repartition.AjouterEquipe(equipe);
             }
