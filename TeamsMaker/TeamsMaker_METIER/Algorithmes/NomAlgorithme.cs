@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TeamsMaker_METIER.Algorithmes.Realisations;
 
 namespace TeamsMaker_METIER.Algorithmes
 {
@@ -13,7 +14,8 @@ namespace TeamsMaker_METIER.Algorithmes
     {
         ALGOTEST,
         GLOUTON_CROISSANT,
-        LEVEL_BALANCING
+        LEVEL_BALANCING,
+        LOW_HIGH_MATCHING
     }
 
 
@@ -32,7 +34,9 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.ALGOTEST: res = "Algorithme de test (à supprimer)"; break;
                 case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant"; break;
                 case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing (probleme n°1)"; break;
+                case NomAlgorithme.LOW_HIGH_MATCHING: res = "fort avec faible (probleme n°1)"; break;
             }
+            
 
             return res;
         }
