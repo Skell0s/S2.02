@@ -68,7 +68,6 @@ C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Explorat
 C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Exploration algorithmique d'un problème\TP\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\ref\TeamsMaker_IHM.dll
 C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Exploration algorithmique d'un problème\TP\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Test.jt
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.exe
-C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Vide.jt
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Test.jt
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.deps.json
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.runtimeconfig.json
@@ -137,3 +136,4 @@ C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-window
 C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.pdb
 C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.genruntimeconfig.cache
 C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\ref\TeamsMaker_IHM.dll
+C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest.jt
