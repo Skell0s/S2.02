@@ -12,7 +12,8 @@ namespace TeamsMaker_METIER.Algorithmes
     public enum NomAlgorithme
     {
         ALGOTEST,
-        GLOUTON_CROISSANT
+        GLOUTON_CROISSANT,
+        LEVEL_BALANCING
     }
 
 
@@ -30,6 +31,7 @@ namespace TeamsMaker_METIER.Algorithmes
             {
                 case NomAlgorithme.ALGOTEST: res = "Algorithme de test (à supprimer)"; break;
                 case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant"; break;
+                case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing"; break;
             }
 
             return res;
