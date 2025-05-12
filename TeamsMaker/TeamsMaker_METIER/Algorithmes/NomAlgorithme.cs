@@ -13,7 +13,8 @@ namespace TeamsMaker_METIER.Algorithmes
     {
         ALGOTEST,
         GLOUTON_CROISSANT,
-        LEVEL_BALANCING
+        LEVEL_BALANCING,
+        ALGOROLEPRINCIPALE
     }
 
 
@@ -32,6 +33,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.ALGOTEST: res = "Algorithme de test (à supprimer)"; break;
                 case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant"; break;
                 case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing"; break;
+                case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal"; break;
             }
 
             return res;

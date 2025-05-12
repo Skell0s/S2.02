@@ -38,3 +38,17 @@ C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\refin
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.pdb
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\ref\TeamsMaker_METIER.dll
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\jeutest.jt
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\jeutest.jt
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\Test.jt
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\TeamsMaker_METIER.deps.json
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\TeamsMaker_METIER.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\TeamsMaker_METIER.pdb
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.AssemblyInfoInputs.cache
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.AssemblyInfo.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.csproj.CoreCompileInputs.cache
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.sourcelink.json
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\refint\TeamsMaker_METIER.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.pdb
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\ref\TeamsMaker_METIER.dll
