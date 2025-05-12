@@ -68,6 +68,7 @@ C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Explorat
 C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Exploration algorithmique d'un problème\TP\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\ref\TeamsMaker_IHM.dll
 C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Exploration algorithmique d'un problème\TP\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Test.jt
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.exe
+C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Vide.jt
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Test.jt
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.deps.json
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.runtimeconfig.json
@@ -101,4 +102,38 @@ C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.pdb
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.genruntimeconfig.cache
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\ref\TeamsMaker_IHM.dll
-C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest.jt
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.exe
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest.jt
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Test.jt
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.deps.json
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.runtimeconfig.json
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_IHM.pdb
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_METIER.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_VM.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_VM.pdb
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\TeamsMaker_METIER.pdb
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.csproj.AssemblyReference.cache
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\Ecrans\Elements\VueEquipe.g.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\Ecrans\Realisations\EcranTestAlgo.g.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\Fenetres\FenetrePrincipale.g.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM_Content.g.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM_MarkupCompile.cache
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM_MarkupCompile.lref
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\Ecrans\Elements\VueEquipe.baml
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\Ecrans\Realisations\EcranTestAlgo.baml
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\Fenetres\FenetrePrincipale.baml
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.g.resources
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.AssemblyInfoInputs.cache
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.AssemblyInfo.cs
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.csproj.CoreCompileInputs.cache
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.sourcelink.json
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMak.E858172A.Up2Date
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\refint\TeamsMaker_IHM.dll
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.pdb
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.genruntimeconfig.cache
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\ref\TeamsMaker_IHM.dll

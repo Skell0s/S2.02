@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TeamsMaker_METIER.Algorithmes.Outils;
-using TeamsMaker_METIER.JeuxTest;
+﻿using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Problemes;
 
@@ -49,7 +43,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         meilleurP2 = p2;
                     }
 
-                    if (ecart == 0) break; 
+                    if (ecart == 0) break;
                 }
 
                 if (meilleurP2 != null)
