@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "TeamsMaker_METIER/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TeamsMaker_METIER.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TeamsMaker_METIER.dll": {}
+        }
+      },
+      "TeamsMaker_VM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "TeamsMaker_METIER": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TeamsMaker_VM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TeamsMaker_VM.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "TeamsMaker_METIER/1.0.0": {
+      "type": "project",
+      "path": "../TeamsMaker_METIER/TeamsMaker_METIER.csproj",
+      "msbuildProject": "../TeamsMaker_METIER/TeamsMaker_METIER.csproj"
+    },
+    "TeamsMaker_VM/1.0.0": {
+      "type": "project",
+      "path": "../TeamsMaker_VM/TeamsMaker_VM.csproj",
+      "msbuildProject": "../TeamsMaker_VM/TeamsMaker_VM.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "TeamsMaker_VM >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\lixy2\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\lixy2\\OneDrive\\Documents\\BUT\\BUT info\\Cours\\Semestre 2\\S2_02 - Exploration algorithmique d'un problème\\TP\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
+      "projectName": "TeamsMaker_IHM",
+      "projectPath": "C:\\Users\\lixy2\\OneDrive\\Documents\\BUT\\BUT info\\Cours\\Semestre 2\\S2_02 - Exploration algorithmique d'un problème\\TP\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
+      "packagesPath": "C:\\Users\\lixy2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lixy2\\OneDrive\\Documents\\BUT\\BUT info\\Cours\\Semestre 2\\S2_02 - Exploration algorithmique d'un problème\\TP\\TeamsMaker\\TeamsMaker_IHM\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\lixy2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\lixy2\\OneDrive\\Documents\\BUT\\BUT info\\Cours\\Semestre 2\\S2_02 - Exploration algorithmique d'un problème\\TP\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
+              "projectPath": "C:\\Users\\lixy2\\OneDrive\\Documents\\BUT\\BUT info\\Cours\\Semestre 2\\S2_02 - Exploration algorithmique d'un problème\\TP\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
