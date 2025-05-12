@@ -8,11 +8,10 @@
 
   <ItemGroup>
     <None Remove="JeuxTest\Fichiers\Test.jt" />
-    <None Remove="JeuxTest\Fichiers\Vide.jt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="JeuxTest\Fichiers\Vide.jt">
+    <Content Include="JeuxTest\Fichiers\jeutest.jt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
