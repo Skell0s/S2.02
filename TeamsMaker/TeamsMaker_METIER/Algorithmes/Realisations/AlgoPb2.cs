@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Data;
+using System.Text;
 using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages;
@@ -31,25 +32,28 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     int nbtank = 0, nbsupport = 0, nbdps = 0;
                     for (int j = i; j < personnages.Length && equipe.Membres.Length < 4; j++)
                     {
-                        if (dejaUtilises.Contains(personnages[j])) continue;
+                        Role role = personnages[j].RolePrincipal;
+                        bool ajoute = false;
 
-                        if (personnages[j].RolePrincipal == Role.TANK && nbtank < 1)
+                        switch (role)
                         {
-                            equipe.AjouterMembre(personnages[j]);
-                            dejaUtilises.Add(personnages[j]);
-                            nbtank += 1;
+                            case Role.TANK when nbtank < 1:
+                                nbtank++;
+                                ajoute = true;
+                                break;
+                            case Role.SUPPORT when nbsupport < 1:
+                                nbsupport++;
+                                ajoute = true;
+                                break;
+                            case Role.DPS when nbdps < 2:
+                                nbdps++;
+                                ajoute = true;
+                                break;
                         }
-                        else if (personnages[j].RolePrincipal == Role.SUPPORT && nbsupport < 1)
+
+                        if (ajoute)
                         {
                             equipe.AjouterMembre(personnages[j]);
-                            dejaUtilises.Add(personnages[j]);
-                            nbsupport += 1;
-                        }
-                        else if (personnages[j].RolePrincipal == Role.DPS && nbdps < 2)
-                        {
-                            equipe.AjouterMembre(personnages[j]);
-                            dejaUtilises.Add(personnages[j]);
-                            nbdps += 1;
                         }
 
                     }
@@ -58,21 +62,14 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     {
                         repartition.AjouterEquipe(equipe);
                         foreach (var p in equipe.Membres)
-                            personnages.ToList<Personnage>().Remove(p);
+                        {
+                            dejaUtilises.Add(p);
+                        }
                     }
                     else
                     {
-                        // Si l’équipe est incomplète ou invalide, on remet les persos utilisés dans cette tentative
-                        foreach (Personnage p in equipe.Membres)
-                        {
-                            dejaUtilises.Remove(p);
-                        }
-                        // On sort de la boucle
-                        if (personnages.Length < 4)
-                        {
-                            formationPossible = false;
-                            
-                        }
+                        // Impossible de créer une nouvelle équipe valide
+                        formationPossible = false;
                     }
                 }
             }
