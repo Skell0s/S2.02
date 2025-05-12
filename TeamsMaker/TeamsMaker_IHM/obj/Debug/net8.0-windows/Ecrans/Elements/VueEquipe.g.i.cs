@@ -77,7 +77,7 @@ namespace TeamsMaker_IHM.Ecrans.Elements {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TeamsMaker_IHM;V1.0.0.0;component/ecrans/elements/vueequipe.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TeamsMaker_IHM;component/ecrans/elements/vueequipe.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Ecrans\Elements\VueEquipe.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
