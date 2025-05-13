@@ -7,11 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="JeuxTest\Fichiers\jeutest 2.jt" />
+    <None Remove="JeuxTest\Fichiers\Jeutest3.jt" />
     <None Remove="JeuxTest\Fichiers\Test.jt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="JeuxTest\Fichiers\jeutest 2.jt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="JeuxTest\Fichiers\jeutest.jt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JeuxTest\Fichiers\Jeutest3.jt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
