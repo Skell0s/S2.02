@@ -15,7 +15,9 @@ namespace TeamsMaker_METIER.Algorithmes
         GLOUTON_CROISSANT,
         LEVEL_BALANCING,
         ALGOROLEPRINCIPALE,
-        faible_fort_switch
+        ExtremePrem,
+        AlgoJulesPRBLÉME2,
+        AlgoPRogressif
     }
 
 
@@ -31,11 +33,13 @@ namespace TeamsMaker_METIER.Algorithmes
             string res = "Algorithme non nommé :(";
             switch(algo)
             {
-                case NomAlgorithme.ALGOTEST: res = "Algorithme de test (à supprimer)"; break;
-                case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant"; break;
-                case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing"; break;
-                case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal"; break;
-                case NomAlgorithme.faible_fort_switch: res = "faible fort switch"; break;
+                case NomAlgorithme.ALGOTEST: res = "Algorithme de test (à supprimer)----TEST----"; break;
+                case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant----TEST----"; break;
+                case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing----TEST----"; break;
+                case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal----TEST----"; break;
+                case NomAlgorithme.ExtremePrem: res = "Extremes en premier"; break;
+                case NomAlgorithme.AlgoJulesPRBLÉME2: res = "ProblèmeJules----TEST----"; break;
+                case NomAlgorithme.AlgoPRogressif: res = "Algorithme progressif"; break;
             }
 
             return res;
