@@ -38,30 +38,33 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             // Essayer toutes les combinaisons Tank + Support + 2 DPS
             foreach (var tank in tanks)
             {
-                if (dejaUtilises.Contains(tank)) continue;
+                if (dejaUtilises.Contains(tank)) continue; //si tank existe pas
 
                 foreach (var support in supports)
                 {
-                    if (dejaUtilises.Contains(support)) continue;
+                    if (dejaUtilises.Contains(support)) continue; //si support existe pas
 
-                    // Toutes les combinaisons possibles de 2 DPS
-                    for (int i = 0; i < dps.Count; i++)
+
+                    for (int i = 0; i < dps.Count; i++)              //cherche si il reste des dps paire 
                     {
-                        if (dejaUtilises.Contains(dps[i])) continue;
+                        if (dejaUtilises.Contains(dps[i])) continue;  // si dps paire existe pas
 
-                        for (int j = i + 1; j < dps.Count; j++)
+                        for (int j = i + 1; j < dps.Count; j++)  // cherche si il reste des dps paire 
                         {
-                            if (dejaUtilises.Contains(dps[j])) continue;
+                            if (dejaUtilises.Contains(dps[j])) continue; // si dps impaire existe pas 
 
-                            var equipeTemp = new List<Personnage> { tank, support, dps[i], dps[j] };
+                            var equipeTemp = new List<Personnage> { tank, support, dps[i], dps[j] };  //crée une liste de personnage sous forme d'une équipe
 
-                            // S’assurer qu’il n’y a pas de doublons
-                            if (equipeTemp.Distinct().Count() != 4) continue;
+                            
+                            if (equipeTemp.Distinct().Count() != 4) continue;   // S’assurer qu’il n’y a pas de doublons
 
-                            // Créer et valider l’équipe
-                            Equipe equipe = new Equipe();
-                            foreach (var p in equipeTemp)
+
+                            Equipe equipe = new Equipe();                             // Créer et valider l’équipe
+                            
+                            foreach (var p in equipeTemp) 
+                            { 
                                 equipe.AjouterMembre(p);
+                            }
 
                             if (equipe.EstValide(Probleme.ROLEPRINCIPAL))
                             {
