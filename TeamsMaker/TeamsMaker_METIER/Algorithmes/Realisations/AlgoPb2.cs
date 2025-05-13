@@ -16,14 +16,46 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
             Repartition repartition = new Repartition(jeuTest);
-
-            // Pour suivre les personnages déjà utilisés
             HashSet<Personnage> dejaUtilises = new HashSet<Personnage>();
 
+            int z = personnages.ToList<Personnage>().Count - 1;
+            int a = 0;
             bool formationPossible = true;
+
+            while (z > 0)
+            {
+                for (int i = 0; i <= personnages.Length - 3; i += 4) //ajout de joueur jusqu'a qu'il reste moins de 4 joueur
+                {
+                    Equipe equipe = new Equipe();
+                    for (int j = i; j < i + 2; j += 1)
+                    {
+                        equipe.AjouterMembre(personnages[a]);
+                        equipe.AjouterMembre(personnages[z]);
+                        z -= 1;
+                        a += 1;
+                    }
+                    // Vérifie que l’équipe est complète (4 membres avec bonne répartition)
+                    if (equipe.EstValide(Probleme.ROLEPRINCIPAL))
+                    {
+                        repartition.AjouterEquipe(equipe);
+                        foreach (var p in equipe.Membres)
+                        {
+                            dejaUtilises.Add(p);
+                        }
+                    }
+                    else
+                    {
+                        // Impossible de créer une nouvelle équipe valide
+                        formationPossible = false;
+                    }
+                }
+                return repartition;
+            }
+            
             // Une équipe est valide si elle est composée de 4 personnages dont un tank, un support et 2 dps(en rôle principal)
             while (formationPossible) 
             { 
+                
                 for (int i = 0; i < personnages.Length; i++)
                 {
                     if (dejaUtilises.Contains(personnages[i])) continue;
@@ -56,20 +88,6 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                             equipe.AjouterMembre(personnages[j]);
                         }
 
-                    }
-                    // Vérifie que l’équipe est complète (4 membres avec bonne répartition)
-                    if (equipe.EstValide(Probleme.ROLEPRINCIPAL))
-                    {
-                        repartition.AjouterEquipe(equipe);
-                        foreach (var p in equipe.Membres)
-                        {
-                            dejaUtilises.Add(p);
-                        }
-                    }
-                    else
-                    {
-                        // Impossible de créer une nouvelle équipe valide
-                        formationPossible = false;
                     }
                 }
             }
