@@ -1,5 +1,6 @@
 ﻿using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages;
+using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
@@ -101,9 +102,10 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             Repartition repartition = new Repartition(jeuTest);
             foreach (var equipe in equipes)
             {
-                //if () 
-                //{ }
-                repartition.AjouterEquipe(equipe);
+                if (equipe.Score(Probleme.SIMPLE) <= 400)
+                {
+                    repartition.AjouterEquipe(equipe);
+                }
             }
 
             return repartition;
