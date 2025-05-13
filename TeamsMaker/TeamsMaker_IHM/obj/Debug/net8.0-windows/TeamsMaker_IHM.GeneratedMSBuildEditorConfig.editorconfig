@@ -8,7 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TeamsMaker_IHM
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Exploration algorithmique d'un problème\TP\TeamsMaker\TeamsMaker_IHM\
+=======
+build_property.ProjectDir = C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\
+>>>>>>> Stashed changes
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

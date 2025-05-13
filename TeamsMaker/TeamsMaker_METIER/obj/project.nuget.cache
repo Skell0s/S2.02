@@ -1,8 +1,19 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "czP/s0eYDZ4=",
   "success": true,
   "projectFilePath": "C:\\Users\\lixy2\\OneDrive\\Documents\\BUT\\BUT info\\Cours\\Semestre 2\\S2_02 - Exploration algorithmique d'un problème\\TP\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
   "expectedPackageFiles": [],
+=======
+  "dgSpecHash": "+V+wZSdMmNc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
+  ],
+>>>>>>> Stashed changes
   "logs": []
 }

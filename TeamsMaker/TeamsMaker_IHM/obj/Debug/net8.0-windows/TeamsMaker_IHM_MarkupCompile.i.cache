@@ -4,6 +4,7 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Exploration algorithmique d'un problème\TP\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\
 TeamsMaker_IHM
 none
@@ -14,7 +15,19 @@ C:\Users\lixy2\OneDrive\Documents\BUT\BUT info\Cours\Semestre 2\S2_02 - Explorat
 1-1606302853
 11214839484
 200-1537260593
+=======
+C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\
+TeamsMaker_IHM
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\App.xaml
+3-1469973196
+1-1606302853
+11214839484
+200618961216
+>>>>>>> Stashed changes
 Ecrans\Elements\VueEquipe.xaml;Ecrans\Realisations\EcranTestAlgo.xaml;Fenetres\FenetrePrincipale.xaml;
 
-False
+True
 
