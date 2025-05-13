@@ -12,14 +12,10 @@ namespace TeamsMaker_METIER.Algorithmes
     public enum NomAlgorithme
     {
         ALGOTEST,
-<<<<<<< Updated upstream
-        GLOUTON_CROISSANT
-=======
         GLOUTON_CROISSANT,
         LEVEL_BALANCING,
         ALGOROLEPRINCIPALE,
-        ALGOROLESECONDAIREV1
->>>>>>> Stashed changes
+        faible_fort_switch
     }
 
 
@@ -37,12 +33,9 @@ namespace TeamsMaker_METIER.Algorithmes
             {
                 case NomAlgorithme.ALGOTEST: res = "Algorithme de test (à supprimer)"; break;
                 case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant"; break;
-<<<<<<< Updated upstream
-=======
                 case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing"; break;
                 case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal"; break;
-                case NomAlgorithme.ALGOROLESECONDAIREV1: res = "Algorithme de répartition par rôle principal et secondaire"; break;
->>>>>>> Stashed changes
+                case NomAlgorithme.faible_fort_switch: res = "faible fort switch"; break;
             }
 
             return res;
