@@ -7,7 +7,7 @@ using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages;
 
-namespace TeamsMaker_METIER.Algorithmes.Realisations
+namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
     public class AlgorithmesGloutonCroissant : Algorithme
     {

@@ -2,7 +2,7 @@
 using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Problemes;
 
-namespace TeamsMaker_METIER.Algorithmes.Realisations
+namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
     internal class Level_balancing : Algorithme
     {
