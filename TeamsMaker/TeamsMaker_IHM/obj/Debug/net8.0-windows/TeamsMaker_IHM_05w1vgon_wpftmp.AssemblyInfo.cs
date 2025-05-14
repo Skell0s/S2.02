@@ -11,13 +11,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("TeamsMaker_METIER")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("TeamsMaker_IHM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f949d9e94a6b722f605f437031fea54530287a94")]
-[assembly: System.Reflection.AssemblyProductAttribute("TeamsMaker_METIER")]
-[assembly: System.Reflection.AssemblyTitleAttribute("TeamsMaker_METIER")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25252c50ccb7c5b50ab60f2154d70dc20512cde3")]
+[assembly: System.Reflection.AssemblyProductAttribute("TeamsMaker_IHM")]
+[assembly: System.Reflection.AssemblyTitleAttribute("TeamsMaker_IHM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
 
