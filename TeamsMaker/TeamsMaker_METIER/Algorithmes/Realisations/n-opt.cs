@@ -8,22 +8,23 @@ using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Personnages.Classes;
+using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
     internal class n_opt : Algorithme
     {
-       /* private List<Personnage> equipede2 = new List<Personnage>();
-        private List<Equipe> equipes2;
+        /* private List<Personnage> equipede2 = new List<Personnage>();
+         private List<Equipe> equipes2;
 
-        public void EquipeDe2(Personnage personnage)
-        {
-            this.equipede2.Add(personnage);
-        }
-        public void AjouterEquipe2(Equipe equipe)
-        {
-            this.equipes2.Add(equipe);
-        }*/
+         public void EquipeDe2(Personnage personnage)
+         {
+             this.equipede2.Add(personnage);
+         }
+         public void AjouterEquipe2(Equipe equipe)
+         {
+             this.equipes2.Add(equipe);
+         }*/
 
         public override Repartition Repartir(JeuTest jeuTest)
         {
@@ -55,36 +56,78 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             for (int i = 0; i <= personnages.Length - 4; i += 4)
             {
-                Equipe equipe = new Equipe();
-                Equipe equipe2 = new Equipe();
+                Equipe equipeDe2 = new Equipe();
+                Equipe equipeDe4 = new Equipe();
                 // Ajouter Tank, DPS, Support, DPS
-                equipe.AjouterMembre(tanks[t]);
-                equipe.AjouterMembre(dps[d]);
+                equipeDe2.AjouterMembre(tanks[t]);
+                equipeDe2.AjouterMembre(dps[d]);
 
-                equipe2.AjouterMembre(tanks[t]);
-                equipe2.AjouterMembre(dps[d]);
-                //repartition.AjouterEquipe(equipe2);
+                equipeDe4.AjouterMembre(tanks[t]);
+                equipeDe4.AjouterMembre(dps[d]);
+                //repartition.AjouterEquipe(equipeDe2);
 
                 d -= 1; t += 1;
 
-                equipe.AjouterMembre(supports[s]);
-                equipe.AjouterMembre(dps[d]);
+                equipeDe2.AjouterMembre(supports[s]);
+                equipeDe2.AjouterMembre(dps[d]);
 
-                equipe2.AjouterMembre(supports[s]);
-                equipe2.AjouterMembre(dps[d]);
-                //repartition.AjouterEquipe(equipe2);
+                equipeDe4.AjouterMembre(supports[s]);
+                equipeDe4.AjouterMembre(dps[d]);
+                //repartition.AjouterEquipe(equipeDe2);
 
                 d -= 1; s += 1;
 
 
                 // Créer équipe de 2 à partir du tank et du premier dps
 
-                repartition.AjouterEquipe(equipe);
+                //////////////////////////////////////////////////////////////////////////////////////repartition.AjouterEquipe(equipeDe4);
+            }
+            Equipe[] tableauequipe = repartition.Equipes;
+            int nbEquipes = tableauequipe.Length;
+
+            for (int i = 0; i < nbEquipes - 1; i++)
+            {
+                for (int j = i + 1; j < nbEquipes; j++)
+                {
+                    // Comparer deux équipes par leur score sur le problème SIMPLE
+                    var scoreI = tableauequipe[i].Score(Probleme.SIMPLE);
+                    var scoreJ = tableauequipe[j].Score(Probleme.SIMPLE);
+
+                    if (scoreI > scoreJ)
+                    {
+                        // Exemple : afficher ou mémoriser la meilleure équipe
+                        repartition.AjouterEquipe(tableauequipe[i]);
+                    }
+                }
             }
 
+            return repartition;
+        }
+    }
+}
+            /*
+             
             Equipe[] tableauequipe = repartition.Equipes;
 
-            int boucle = tableauequipe.Length - 1;
+            int boucle = tableauequipe.Length - 1; // nombre de groupe 
+
+
+            for (int debut = 0; debut < boucle; debut++) //toute les équipe de équipe une a dernier
+            {
+                for (int e = 0; e < boucle; debut++) //permet de faire une boucle pour comparé chaque truc
+                {
+                    //crée une équipe avec léquipe de deux et une autre zéquipe de deux
+                    
+                    if (tableauequipe[boucle] == tableauequipe[e]) //si le score de debut est supérieur au score du nouveau groupe de deux   (equipe.Score(Probleme.SIMPLE) > )
+                    {
+                        
+                    }
+                }
+
+
+
+            }
+
 
             //Equipe derniereEquipe = tableauequipe.Last();
             //Personnage dernierPerso = derniereEquipe.Membres.Last();
@@ -93,4 +136,4 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             return repartition;
         }
     }
-}
+}*/
