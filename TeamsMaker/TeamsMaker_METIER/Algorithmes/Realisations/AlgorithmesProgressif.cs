@@ -14,11 +14,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
-            bool utiliseValidite = true;
-            return AlgoProgressif(jeuTest, utiliseValidite);          
+            Repartition AlgoPro = AlgoProgressif(jeuTest);
+            AlgoPro = FiltrerEquipesValidite(jeuTest, AlgoPro, Probleme.SIMPLE);
+            return AlgoPro;
         }
 
-        public Repartition AlgoProgressif(JeuTest jeuTest, bool utiliseValidite)
+        public Repartition AlgoProgressif(JeuTest jeuTest)
         {
             List<Personnage> disponibles = jeuTest.Personnages.ToList();
             Repartition repartition = new Repartition(jeuTest);
@@ -54,16 +55,19 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         disponibles.Remove(meilleurCandidat);
                     }
 
-                    if (utiliseValidite == true && equipe.Membres.Length == 4)
+                    if (equipe.Membres.Length == 4)
                     {
-                        if (Validite(Probleme.SIMPLE, equipe) == true)
+                        double moyenneEquipe = equipe.Membres.Average(p => p.LvlPrincipal);
+                        double scoreEquipe = (moyenneEquipe - 50) * (moyenneEquipe - 50);
+
+                        if (equipe.EstValide(Probleme.SIMPLE))
                         {
-                            AddEquipe(repartition, equipe);
+                            repartition.AjouterEquipe(equipe);
                         }
-                    }
-                    else if (equipe.Membres.Length == 4)
-                    {
-                        repartition.AjouterEquipe(equipe);
+                        else
+                        {
+                            formationPossible = false;
+                        }
                     }
 
                     if (disponibles.Count < 4)
@@ -75,28 +79,22 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             return repartition;
         }
 
-        public bool Validite(Probleme probleme,Equipe equipe)
+        private Repartition FiltrerEquipesValidite(JeuTest jeuTest,Repartition repartition, Probleme probleme)
         {
-            bool formationPossible;
-            double moyenneEquipe = equipe.Membres.Average(p => p.LvlPrincipal);
-            double scoreEquipe = (moyenneEquipe - 50) * (moyenneEquipe - 50);
+            Repartition nouvelleRepartition = new Repartition(jeuTest);
 
-            if (scoreEquipe < 400 && equipe.EstValide(probleme))
+            foreach (var equipe in repartition.Equipes)
             {
-                formationPossible = true;
-            }
-            else
-            {
-                formationPossible = false;
+                double moyenne = equipe.Membres.Average(p => p.LvlPrincipal);
+                double score = (moyenne - 50) * (moyenne - 50);
+
+                if (score < 400 && equipe.EstValide(probleme))
+                {
+                    nouvelleRepartition.AjouterEquipe(equipe);
+                }
             }
 
-            return formationPossible;
-        }
-
-        public Repartition AddEquipe(Repartition repartition, Equipe equipe)
-        {
-            repartition.AjouterEquipe(equipe);
-            return repartition;
+            return nouvelleRepartition;
         }
 
     }
