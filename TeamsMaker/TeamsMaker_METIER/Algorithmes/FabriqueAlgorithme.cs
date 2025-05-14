@@ -39,7 +39,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.ExtremePrem: res = new Low_High_Matching(); break; 
                 case NomAlgorithme.AlgoJulesPRBLÉME2: res = new algopb2jul(); break;
                 case NomAlgorithme.AlgoPRogressif: res = new AlgorithmesProgressif(); break;
-
+                case NomAlgorithme.NSWAP: res = new n_swap(); break;
 
             }
             return res;

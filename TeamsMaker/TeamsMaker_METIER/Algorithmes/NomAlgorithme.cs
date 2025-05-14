@@ -17,7 +17,8 @@ namespace TeamsMaker_METIER.Algorithmes
         ALGOROLEPRINCIPALE,
         ExtremePrem,
         AlgoJulesPRBLÉME2,
-        AlgoPRogressif
+        AlgoPRogressif,
+        NSWAP
     }
 
 
@@ -40,6 +41,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.ExtremePrem: res = "Extremes en premier"; break;
                 case NomAlgorithme.AlgoJulesPRBLÉME2: res = "ProblèmeJules----TEST----"; break;
                 case NomAlgorithme.AlgoPRogressif: res = "Algorithme progressif"; break;
+                case NomAlgorithme.NSWAP: res = "N-swap"; break;
             }
 
             return res;

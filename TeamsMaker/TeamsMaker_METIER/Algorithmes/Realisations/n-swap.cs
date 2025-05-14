@@ -13,15 +13,16 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
-            Low_High_Matching algoInitial = new Low_High_Matching();
-            Repartition repartition = algoInitial.Repartir(jeuTest);
+            AlgorithmesProgressif algoInitial = new AlgorithmesProgressif();
+            Repartition repartition = algoInitial.AlgorithmeProgressif(jeuTest);
 
             repartition = AppliquerNSwap(repartition, jeuTest);
+            repartition = SupprimerEquipeScoreEleve(repartition, jeuTest);
 
             return repartition;
         }
 
-        private Repartition AppliquerNSwap(Repartition repartition, JeuTest jeuTest)
+        public Repartition AppliquerNSwap(Repartition repartition, JeuTest jeuTest)
         {
             Repartition swapRepartition = repartition;
             bool ameliorationTrouvee = true;
@@ -122,7 +123,11 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             }
             foreach (Equipe equipe in r.Equipes)
             {
-                repartition.AjouterEquipe(equipe);
+                if (equipe != e1 && equipe != e2) 
+                { 
+                    repartition.AjouterEquipe(equipe); 
+                }
+
             }
             return repartition;
         }

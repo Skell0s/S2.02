@@ -14,6 +14,14 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            Repartition repartition = AlgorithmeProgressif(jeuTest);
+            repartition = SupprimerEquipeScoreEleve(repartition, jeuTest);
+
+            return repartition;
+        }
+
+        public Repartition AlgorithmeProgressif(JeuTest jeuTest)
+        {
             List<Personnage> disponibles = jeuTest.Personnages.ToList();
             Repartition repartition = new Repartition(jeuTest);
             bool formationPossible = true;
@@ -55,7 +63,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         double scoreEquipe = (moyenneEquipe - 50) * (moyenneEquipe - 50);
 
                         // Si le score de l'équipe est valide (inférieur à 50), on l'ajoute à la répartition
-                        if (scoreEquipe < 100 && equipe.EstValide(Probleme.SIMPLE))
+                        if (equipe.EstValide(Probleme.SIMPLE))
                         {
                             repartition.AjouterEquipe(equipe);
                         }
@@ -77,7 +85,5 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             return repartition;
         }
-
-
     }
 }
