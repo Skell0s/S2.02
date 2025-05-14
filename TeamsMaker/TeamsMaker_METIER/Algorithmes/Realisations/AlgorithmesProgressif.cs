@@ -85,10 +85,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             foreach (var equipe in repartition.Equipes)
             {
-                double moyenne = equipe.Membres.Average(p => p.LvlPrincipal);
-                double score = (moyenne - 50) * (moyenne - 50);
-
-                if (score < 400 && equipe.EstValide(probleme))
+                if (equipe.Score(Probleme.SIMPLE) < 400)
                 {
                     nouvelleRepartition.AjouterEquipe(equipe);
                 }
