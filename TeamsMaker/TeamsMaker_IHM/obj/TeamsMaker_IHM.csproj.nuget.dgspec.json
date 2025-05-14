@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {}
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
+        "projectUniqueName": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
         "projectName": "TeamsMaker_IHM",
-        "projectPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
-        "packagesPath": "C:\\Users\\lixy2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\obj\\",
+        "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
+        "packagesPath": "C:\\Users\\pro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lixy2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
-                "projectPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj"
+              "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
+                "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj"
               }
             }
           }
@@ -48,7 +48,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -72,24 +72,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
+        "projectUniqueName": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
         "projectName": "TeamsMaker_METIER",
-        "projectPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
-        "packagesPath": "C:\\Users\\lixy2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\obj\\",
+        "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
+        "packagesPath": "C:\\Users\\pro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lixy2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -116,7 +116,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -137,24 +137,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
+        "projectUniqueName": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
         "projectName": "TeamsMaker_VM",
-        "projectPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
-        "packagesPath": "C:\\Users\\lixy2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\obj\\",
+        "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
+        "packagesPath": "C:\\Users\\pro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lixy2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -169,8 +169,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
-                "projectPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj"
+              "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
+                "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj"
               }
             }
           }
@@ -185,7 +185,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -209,7 +209,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

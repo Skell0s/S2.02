@@ -10,21 +10,21 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
         {
             Personnage[] personnages = jeuTest.Personnages;
             Dictionary<Personnage, int> balances = personnages
-                .ToDictionary(p => p, p => p.LvlPrincipal - 50);
 
-            // On trie les personnages par balance
-            var sorted = balances.OrderBy(kv => kv.Value).ToList();
+            .ToDictionary(p => p, p => p.LvlPrincipal - 50);            // transformation d'une liste en dictonnaire qu'on diminue par 50
+
+            var sorted = balances.OrderBy(kv => kv.Value).ToList();             // On trie les personnages par balance
 
             List<List<Personnage>> paires = new List<List<Personnage>>();
             HashSet<Personnage> utilises = new HashSet<Personnage>();
 
             // Étape 1 : former les meilleures paires possibles
-            for (int i = 0; i < sorted.Count; i++)
+            for (int i = 0; i < sorted.Count; i++)                 //parcour la liste jusqu'a qu'il n'y a plus de personne 
             {
-                if (utilises.Contains(sorted[i].Key)) continue;
+                if (utilises.Contains(sorted[i].Key)) continue;   //on regarde si la personne esf déja utilsé
 
-                Personnage p1 = sorted[i].Key;
-                int b1 = sorted[i].Value;
+                Personnage p1 = sorted[i].Key; //p1 prend le nom du personnage
+                int b1 = sorted[i].Value;      //b1 prend la valeur du personnage
 
                 int meilleurEcart = int.MaxValue;
                 Personnage meilleurP2 = null;
@@ -100,9 +100,10 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 
             // Étape 3 : créer la répartition
             Repartition repartition = new Repartition(jeuTest);
-            foreach (var equipe in equipes)
+            
+            foreach (var equipe in equipes)               // parcours les équipes
             {
-                if (equipe.Score(Probleme.SIMPLE) <= 400)
+                if (equipe.Score(Probleme.SIMPLE) <= 400) //si l'équipe est suppéreur a 400 alors ne pas crée l'équipe
                 {
                     repartition.AjouterEquipe(equipe);
                 }
