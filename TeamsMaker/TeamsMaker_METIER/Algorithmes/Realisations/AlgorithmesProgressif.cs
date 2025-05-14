@@ -14,6 +14,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            bool utiliseValidite = true;
+            return AlgoProgressif(jeuTest, utiliseValidite);          
+        }
+
+        public Repartition AlgoProgressif(JeuTest jeuTest, bool utiliseValidite)
+        {
             List<Personnage> disponibles = jeuTest.Personnages.ToList();
             Repartition repartition = new Repartition(jeuTest);
             bool formationPossible = true;
@@ -48,36 +54,50 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         disponibles.Remove(meilleurCandidat);
                     }
 
-                    // Vérifiez si l'équipe est complète
-                    if (equipe.Membres.Length == 4)
+                    if (utiliseValidite == true && equipe.Membres.Length == 4)
                     {
-                        double moyenneEquipe = equipe.Membres.Average(p => p.LvlPrincipal);
-                        double scoreEquipe = (moyenneEquipe - 50) * (moyenneEquipe - 50);
-
-                        // Si le score de l'équipe est valide (inférieur à 50), on l'ajoute à la répartition
-                        if (scoreEquipe < 100 && equipe.EstValide(Probleme.SIMPLE))
+                        if (Validite(Probleme.SIMPLE, equipe) == true)
                         {
-                            repartition.AjouterEquipe(equipe);
-                        }
-                        else
-                        {
-                            // Si l'équipe ne respecte pas la condition, la formation échoue
-                            formationPossible = false;
-                            break;
+                            AddEquipe(repartition, equipe);
                         }
                     }
-                }
+                    else if (equipe.Membres.Length == 4)
+                    {
+                        repartition.AjouterEquipe(equipe);
+                    }
 
-                // Si on ne peut plus former d'autres équipes valides, on arrête la formation.
-                if (disponibles.Count < 4)
-                {
-                    formationPossible = false;
+                    if (disponibles.Count < 4)
+                    {
+                        formationPossible = false;
+                    }
                 }
             }
-
             return repartition;
         }
 
+        public bool Validite(Probleme probleme,Equipe equipe)
+        {
+            bool formationPossible;
+            double moyenneEquipe = equipe.Membres.Average(p => p.LvlPrincipal);
+            double scoreEquipe = (moyenneEquipe - 50) * (moyenneEquipe - 50);
+
+            if (scoreEquipe < 400 && equipe.EstValide(probleme))
+            {
+                formationPossible = true;
+            }
+            else
+            {
+                formationPossible = false;
+            }
+
+            return formationPossible;
+        }
+
+        public Repartition AddEquipe(Repartition repartition, Equipe equipe)
+        {
+            repartition.AjouterEquipe(equipe);
+            return repartition;
+        }
 
     }
 }
