@@ -36,10 +36,11 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.GLOUTON_CROISSANT: res = new AlgorithmesGloutonCroissant(); break;
                 case NomAlgorithme.LEVEL_BALANCING: res = new Level_balancing(); break;
                 case NomAlgorithme.ALGOROLEPRINCIPALE: res = new AlgoPb2(); break;
-                case NomAlgorithme.ExtremePrem: res = new Low_High_Matching(); break; 
+                case NomAlgorithme.ExtremePrem: res = new AlgoExtremeEnPremier(); break; 
                 case NomAlgorithme.AlgoJulesPRBLÉME2: res = new algopb2jul(); break;
                 case NomAlgorithme.AlgoPRogressif: res = new AlgorithmesProgressif(); break;
-                case NomAlgorithme.NSWAP: res = new n_swap(); break;
+                case NomAlgorithme.n_opt: res = new n_opt(); break;
+                case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = new AlgoExtremeEnPremier_niv2(); break;
 
             }
             return res;

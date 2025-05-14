@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TeamsMaker_METIER.Algorithmes.Realisations;
 
 namespace TeamsMaker_METIER.Algorithmes
 {
@@ -18,7 +19,8 @@ namespace TeamsMaker_METIER.Algorithmes
         ExtremePrem,
         AlgoJulesPRBLÉME2,
         AlgoPRogressif,
-        NSWAP
+        n_opt,
+        AlgoExtremeEnPremier_niv2
     }
 
 
@@ -39,10 +41,12 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing----TEST----"; break;
                 case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal----TEST----"; break;
                 case NomAlgorithme.ExtremePrem: res = "Extremes en premier"; break;
+                case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = "Extremes en premier level 2"; break;
                 case NomAlgorithme.AlgoJulesPRBLÉME2: res = "ProblèmeJules----TEST----"; break;
                 case NomAlgorithme.AlgoPRogressif: res = "Algorithme progressif"; break;
-                case NomAlgorithme.NSWAP: res = "N-swap"; break;
+                case NomAlgorithme.n_opt: res = "Algorithme n-opt"; break; 
             }
+            
 
             return res;
         }
