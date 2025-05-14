@@ -15,7 +15,8 @@ namespace TeamsMaker_METIER.Algorithmes
         GLOUTON_CROISSANT,
         LEVEL_BALANCING,
         ALGOROLEPRINCIPALE,
-        faible_fort_switch
+        faible_fort_switch,
+        NSWAP
     }
 
 
@@ -36,6 +37,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing"; break;
                 case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal"; break;
                 case NomAlgorithme.faible_fort_switch: res = "faible fort switch"; break;
+                case NomAlgorithme.NSWAP: res = "N-swap appliqué sur l'algo extrême en premier"; break;
             }
 
             return res;

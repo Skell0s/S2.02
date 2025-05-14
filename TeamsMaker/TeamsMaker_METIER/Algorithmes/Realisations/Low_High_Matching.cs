@@ -16,7 +16,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal()); 
             Repartition repartition = new Repartition(jeuTest);
-            int z = 104;//personnages.ToList<Personnage>().Count;
+            int z = personnages.ToList<Personnage>().Count - 1;
             int a = 0;
             
             for (int i = 0; i <= personnages.Length - 3; i += 4) //ajout de joueur jusqu'a qu'il reste moins de 4 joueur

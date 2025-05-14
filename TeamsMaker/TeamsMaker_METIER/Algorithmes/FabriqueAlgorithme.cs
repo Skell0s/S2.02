@@ -36,7 +36,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.LEVEL_BALANCING: res = new Level_balancing(); break;
                 case NomAlgorithme.ALGOROLEPRINCIPALE: res = new AlgoPb2(); break;
                 case NomAlgorithme.faible_fort_switch: res = new Low_High_Matching(); break;
-                    
+                case NomAlgorithme.NSWAP: res = new n_swap(); break;
             }
             return res;
         }
