@@ -9,7 +9,7 @@ using TeamsMaker_METIER.Personnages;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    internal class Low_High_Matching : Algorithme
+    internal class AlgoExtremeEnPremier : Algorithme
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
