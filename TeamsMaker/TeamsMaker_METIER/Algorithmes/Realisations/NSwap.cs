@@ -9,12 +9,12 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    public class n_swap : Algorithme
+    public class NSwap : Algorithme
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
-            AlgorithmesProgressif algoInitial = new AlgorithmesProgressif();
-            Repartition repartition = algoInitial.AlgorithmeProgressif(jeuTest);
+            AlgorithmeExtremeEnPremier algoInitial = new AlgorithmeExtremeEnPremier();
+            Repartition repartition = algoInitial.Repartir(jeuTest);
 
             repartition = AppliquerNSwap(repartition, jeuTest);
             repartition = SupprimerEquipeScoreEleve(repartition, jeuTest);
@@ -88,7 +88,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
         private bool EstEchangeValide(Equipe e1, Personnage p1, Equipe e2, Personnage p2)
         {
             bool result = true;
-            
+
             foreach (Equipe equipe in EquipesEchange(e1, p1, e2, p2))
             {
                 result = result && equipe.EstValide(Probleme.SIMPLE);
@@ -123,13 +123,15 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             }
             foreach (Equipe equipe in r.Equipes)
             {
-                if (equipe != e1 && equipe != e2) 
-                { 
-                    repartition.AjouterEquipe(equipe); 
+                if (equipe != e1 && equipe != e2)
+                {
+                    repartition.AjouterEquipe(equipe);
                 }
 
             }
             return repartition;
         }
     }
+
 }
+

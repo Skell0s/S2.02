@@ -6,7 +6,7 @@ using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Personnages.Classes;
 using TeamsMaker_METIER.Problemes;
 
-namespace TeamsMaker_METIER.Algorithmes.Realisations
+namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
     public class AlgoPb3V1 : Algorithme
     {
