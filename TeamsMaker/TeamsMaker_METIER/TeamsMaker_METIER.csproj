@@ -8,7 +8,10 @@
 
   <ItemGroup>
     <None Remove="JeuxTest\Fichiers\jeutest 2.jt" />
+<<<<<<< Updated upstream
     <None Remove="JeuxTest\Fichiers\JeuTest1000.jt" />
+=======
+>>>>>>> Stashed changes
     <None Remove="JeuxTest\Fichiers\Jeutest3.jt" />
     <None Remove="JeuxTest\Fichiers\Test.jt" />
   </ItemGroup>
@@ -20,9 +23,12 @@
     <Content Include="JeuxTest\Fichiers\jeutest.jt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+<<<<<<< Updated upstream
     <Content Include="JeuxTest\Fichiers\JeuTest1000.jt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+=======
+>>>>>>> Stashed changes
     <Content Include="JeuxTest\Fichiers\Jeutest3.jt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
