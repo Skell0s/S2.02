@@ -14,7 +14,6 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
-<<<<<<< Updated upstream
             Repartition AlgoPro = AlgorithmeProgressif(jeuTest);
             AlgoPro = SupprimerEquipeScoreEleve(AlgoPro, jeuTest);
             return AlgoPro;
@@ -22,8 +21,6 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
         public Repartition AlgorithmeProgressif(JeuTest jeuTest)
         {
-=======
->>>>>>> Stashed changes
             List<Personnage> disponibles = jeuTest.Personnages.ToList();
             Repartition repartition = new Repartition(jeuTest);
             bool formationPossible = true;
@@ -58,27 +55,17 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         disponibles.Remove(meilleurCandidat);
                     }
 
-<<<<<<< Updated upstream
-=======
-                    // Vérifiez si l'équipe est complète
->>>>>>> Stashed changes
                     if (equipe.Membres.Length == 4)
                     {
                         double moyenneEquipe = equipe.Membres.Average(p => p.LvlPrincipal);
                         double scoreEquipe = (moyenneEquipe - 50) * (moyenneEquipe - 50);
 
-<<<<<<< Updated upstream
                         if (equipe.EstValide(Probleme.SIMPLE))
-=======
-                        // Si le score de l'équipe est valide (inférieur à 50), on l'ajoute à la répartition
-                        if (scoreEquipe < 100 && equipe.EstValide(Probleme.SIMPLE))
->>>>>>> Stashed changes
                         {
                             repartition.AjouterEquipe(equipe);
                         }
                         else
                         {
-<<<<<<< Updated upstream
                             formationPossible = false;
                         }
                     }
@@ -91,25 +78,5 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             }
             return repartition;
         }
-=======
-                            // Si l'équipe ne respecte pas la condition, la formation échoue
-                            formationPossible = false;
-                            break;
-                        }
-                    }
-                }
-
-                // Si on ne peut plus former d'autres équipes valides, on arrête la formation.
-                if (disponibles.Count < 4)
-                {
-                    formationPossible = false;
-                }
-            }
-
-            return repartition;
-        }
-
-
->>>>>>> Stashed changes
     }
 }
