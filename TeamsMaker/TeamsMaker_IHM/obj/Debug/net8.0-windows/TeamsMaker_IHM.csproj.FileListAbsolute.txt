@@ -177,5 +177,3 @@ C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net
 C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.pdb
 C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\TeamsMaker_IHM.genruntimeconfig.cache
 C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\ref\TeamsMaker_IHM.dll
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest 2.jt
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Jeutest3.jt
