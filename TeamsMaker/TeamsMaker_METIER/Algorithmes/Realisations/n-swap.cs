@@ -13,8 +13,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
+<<<<<<< Updated upstream
+            AlgoExtremeEnPremier algoInitial = new AlgoExtremeEnPremier();
+=======
             AlgorithmesProgressif algoInitial = new AlgorithmesProgressif();
-            Repartition repartition = algoInitial.AlgorithmeProgressif(jeuTest);
+>>>>>>> Stashed changes
+            Repartition repartition = algoInitial.Repartir(jeuTest);
 
             repartition = AppliquerNSwap(repartition, jeuTest);
             repartition = SupprimerEquipeScoreEleve(repartition, jeuTest);
