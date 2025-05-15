@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TeamsMaker_METIER.JeuxTest;
+using TeamsMaker_METIER.Personnages;
+using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes
 {
@@ -30,6 +32,19 @@ namespace TeamsMaker_METIER.Algorithmes
         {
             get => this.tempsExecution;
             protected set => this.tempsExecution = value;
+        }
+
+        protected Repartition SupprimerEquipeScoreEleve(Repartition r, JeuTest jeuTest)
+        {
+            Repartition repartition = new Repartition(jeuTest);
+            foreach (Equipe equipe in r.Equipes)
+            {
+                if (equipe.Score(Probleme.SIMPLE) < 400)
+                {
+                    repartition.AjouterEquipe(equipe);
+                }
+            }
+            return repartition;
         }
     }
 }

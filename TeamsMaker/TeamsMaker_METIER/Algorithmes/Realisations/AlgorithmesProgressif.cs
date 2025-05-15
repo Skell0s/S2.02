@@ -14,12 +14,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
-            Repartition AlgoPro = AlgoProgressif(jeuTest);
-            AlgoPro = FiltrerEquipesValidite(jeuTest, AlgoPro, Probleme.SIMPLE);
+            Repartition AlgoPro = AlgorithmeProgressif(jeuTest);
+            AlgoPro = SupprimerEquipeScoreEleve(AlgoPro, jeuTest);
             return AlgoPro;
         }
 
-        public Repartition AlgoProgressif(JeuTest jeuTest)
+        public Repartition AlgorithmeProgressif(JeuTest jeuTest)
         {
             List<Personnage> disponibles = jeuTest.Personnages.ToList();
             Repartition repartition = new Repartition(jeuTest);
@@ -78,21 +78,5 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             }
             return repartition;
         }
-
-        private Repartition FiltrerEquipesValidite(JeuTest jeuTest,Repartition repartition, Probleme probleme)
-        {
-            Repartition nouvelleRepartition = new Repartition(jeuTest);
-
-            foreach (var equipe in repartition.Equipes)
-            {
-                if (equipe.Score(Probleme.SIMPLE) < 400)
-                {
-                    nouvelleRepartition.AjouterEquipe(equipe);
-                }
-            }
-
-            return nouvelleRepartition;
-        }
-
     }
 }
