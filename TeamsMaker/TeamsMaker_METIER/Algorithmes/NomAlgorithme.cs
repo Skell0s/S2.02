@@ -20,7 +20,7 @@ namespace TeamsMaker_METIER.Algorithmes
         AlgoJulesPRBLÉME2,
         AlgoPRogressif,
         n_opt,
-        AlgoExtremeEnPremier_niv2
+        AlgoExtremeEnPremier_niv2,
     }
 
 
@@ -44,7 +44,8 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = "Extremes en premier level 2"; break;
                 case NomAlgorithme.AlgoJulesPRBLÉME2: res = "ProblèmeJules----TEST----"; break;
                 case NomAlgorithme.AlgoPRogressif: res = "Algorithme progressif"; break;
-                case NomAlgorithme.n_opt: res = "Algorithme n-opt"; break; 
+                case NomAlgorithme.n_opt: res = "Algorithme n-opt"; break;
+                
             }
             
 
