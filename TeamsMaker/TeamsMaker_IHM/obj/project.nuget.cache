@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SioHDOszy6Q=",
+  "dgSpecHash": "zdFZl79Zw7s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.16\\microsoft.windowsdesktop.app.ref.8.0.16.nupkg.sha512",
-    "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.16\\microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
-    "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.16\\microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512",
-    "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.16\\microsoft.netcore.app.host.win-x64.8.0.16.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
