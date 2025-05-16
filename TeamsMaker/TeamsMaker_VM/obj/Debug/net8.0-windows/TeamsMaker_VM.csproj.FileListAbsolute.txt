@@ -56,6 +56,7 @@ C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows
 C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\ref\TeamsMaker_VM.dll
 C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest 2.jt
 C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Jeutest3.jt
+<<<<<<< Updated upstream
 C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest 2.jt
 C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest.jt
 C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\JeuTest1000.jt
@@ -100,3 +101,7 @@ C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\T
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\refint\TeamsMaker_VM.dll
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.pdb
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\ref\TeamsMaker_VM.dll
+=======
+C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest 2.jt
+C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Jeutest3.jt
+>>>>>>> Stashed changes
