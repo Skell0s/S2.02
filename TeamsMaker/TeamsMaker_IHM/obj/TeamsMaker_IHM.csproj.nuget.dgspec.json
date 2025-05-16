@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {}
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
+        "projectUniqueName": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
         "projectName": "TeamsMaker_IHM",
-        "projectPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
-        "packagesPath": "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\obj\\",
+        "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\TeamsMaker_IHM.csproj",
+        "packagesPath": "C:\\Users\\pro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jean-CharlesJOREL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
-                "projectPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj"
+              "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
+                "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj"
               }
             }
           }
@@ -65,24 +64,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.16, 8.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -91,24 +72,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.106/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
+        "projectUniqueName": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
         "projectName": "TeamsMaker_METIER",
-        "projectPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
-        "packagesPath": "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\obj\\",
+        "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
+        "packagesPath": "C:\\Users\\pro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jean-CharlesJOREL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -117,7 +98,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -152,43 +132,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.106/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
+    "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
+        "projectUniqueName": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
         "projectName": "TeamsMaker_VM",
-        "projectPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
-        "packagesPath": "C:\\Users\\Jean-CharlesJOREL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_VM\\obj\\",
+        "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
+        "packagesPath": "C:\\Users\\pro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jean-CharlesJOREL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -197,15 +163,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
-                "projectPath": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj"
+              "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
+                "projectPath": "C:\\Users\\pro\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj"
               }
             }
           }
@@ -236,20 +201,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.16, 8.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -258,7 +209,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.106/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
