@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\realisations\\algoextremeenpremier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\realisations\\algoextremeenpremier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\realisations\\n-opt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\realisations\\n-opt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\realisations\\algorithmesprogressif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\realisations\\algorithmesprogressif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\algotest\\algopb2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\algotest\\algopb2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\realisations\\nswap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\realisations\\nswap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\algotest\\algopb2jul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\algotest\\algopb2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\algotest\\algopb2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\algotest\\level_balancing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\algotest\\level_balancing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\nomalgorithme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\nomalgorithme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\realisations\\algorithmesprogressif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|solutionrelative:teamsmaker_metier\\algorithmes\\realisations\\algorithmesprogressif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E3043BE-8222-46B5-B36E-1198B195A6BF}|TeamsMaker_METIER\\TeamsMaker_METIER.csproj|c:\\users\\lixy2\\documents\\s2.02\\teamsmaker\\teamsmaker_metier\\algorithmes\\outils\\comparateurpersonnageparniveauprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,19 +166,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NSwap.cs",
-              "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
-              "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
-              "ToolTip": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
-              "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Title": "AlgoExtremeEnPremier.cs",
+              "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgoExtremeEnPremier.cs",
+              "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgoExtremeEnPremier.cs",
+              "ToolTip": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgoExtremeEnPremier.cs",
+              "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgoExtremeEnPremier.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T07:52:33.3Z",
+              "WhenOpened": "2025-05-16T12:59:11.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "n-opt.cs",
+              "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\n-opt.cs",
+              "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\Realisations\\n-opt.cs",
+              "ToolTip": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\n-opt.cs",
+              "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\Realisations\\n-opt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T12:16:57.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FabriqueAlgorithme.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\FabriqueAlgorithme.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\FabriqueAlgorithme.cs",
@@ -178,12 +199,11 @@
               "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\FabriqueAlgorithme.cs",
               "ViewState": "AgIAABQAAAAAAAAAAIA2wCsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:43:06.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T12:43:06.882Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "jeutest 2.jt",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\JeuxTest\\Fichiers\\jeutest 2.jt",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\JeuxTest\\Fichiers\\jeutest 2.jt",
@@ -195,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "n-swap.cs",
               "DocumentMoniker": "C:\\Users\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\n-swap.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Jean-CharlesJOREL\\dev\\IUT\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\n-swap.cs",
@@ -207,19 +227,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "AlgorithmesProgressif.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgorithmesProgressif.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgorithmesProgressif.cs",
               "ToolTip": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgorithmesProgressif.cs",
               "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\Realisations\\AlgorithmesProgressif.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowBAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:59:36.531Z"
+              "WhenOpened": "2025-05-13T13:59:36.531Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Low_High_Matching.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\Low_High_Matching.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\Realisations\\Low_High_Matching.cs",
@@ -231,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ComparateurPersonnageParNiveauPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Outils\\ComparateurPersonnageParNiveauPrincipal.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\Outils\\ComparateurPersonnageParNiveauPrincipal.cs",
@@ -243,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "AlgorithmeTest.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgorithmeTest.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgorithmeTest.cs",
@@ -251,12 +272,11 @@
               "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgorithmeTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T11:06:33.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T11:06:33.472Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Level_balancing.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\AlgoTest\\Level_balancing.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\AlgoTest\\Level_balancing.cs",
@@ -268,19 +288,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "AlgoPb2.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgoPb2.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgoPb2.cs",
               "ToolTip": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgoPb2.cs",
               "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgoPb2.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T12:24:05.494Z"
+              "WhenOpened": "2025-05-12T12:24:05.494Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "NSwap.cs",
+              "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
+              "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
+              "ToolTip": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
+              "RelativeToolTip": "TeamsMaker_METIER\\Algorithmes\\Realisations\\NSwap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T07:52:33.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "algopb2jul.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\AlgoTest\\algopb2jul.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\AlgoTest\\algopb2jul.cs",
@@ -292,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Repartition.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\JeuxTest\\Repartition.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\JeuxTest\\Repartition.cs",
@@ -304,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IChangementEcran.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\Fenetres\\IChangementEcran.cs",
               "RelativeDocumentMoniker": "TeamsMaker_IHM\\Fenetres\\IChangementEcran.cs",
@@ -316,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "NomAlgorithme.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\NomAlgorithme.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\NomAlgorithme.cs",
@@ -328,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "jeutest.jt",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\JeuxTest\\Fichiers\\jeutest.jt",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\JeuxTest\\Fichiers\\jeutest.jt",
@@ -340,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Jeutest3.jt",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\JeuxTest\\Fichiers\\Jeutest3.jt",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\JeuxTest\\Fichiers\\Jeutest3.jt",
@@ -352,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Test.jt",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\JeuxTest\\Fichiers\\Test.jt",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\JeuxTest\\Fichiers\\Test.jt",
@@ -364,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Personnage.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Personnages\\Personnage.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Personnages\\Personnage.cs",
@@ -376,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Equipe.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Personnages\\Equipe.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Personnages\\Equipe.cs",
@@ -388,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Probleme.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Problemes\\Probleme.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Problemes\\Probleme.cs",
@@ -400,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "JeuTest.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\JeuxTest\\JeuTest.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\JeuxTest\\JeuTest.cs",
@@ -412,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "FenetrePrincipale.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\Fenetres\\FenetrePrincipale.xaml.cs",
               "RelativeDocumentMoniker": "TeamsMaker_IHM\\Fenetres\\FenetrePrincipale.xaml.cs",
@@ -424,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "EcranTestAlgo.xaml",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\Ecrans\\Realisations\\EcranTestAlgo.xaml",
               "RelativeDocumentMoniker": "TeamsMaker_IHM\\Ecrans\\Realisations\\EcranTestAlgo.xaml",
@@ -435,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Ecran.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_IHM\\Ecrans\\Ecran.cs",
               "RelativeDocumentMoniker": "TeamsMaker_IHM\\Ecrans\\Ecran.cs",
@@ -447,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Personnages\\Classes\\Role.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Personnages\\Classes\\Role.cs",
@@ -459,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "ImageManager.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\Ressources\\ImageManager.cs",
               "RelativeDocumentMoniker": "TeamsMaker_VM\\Ressources\\ImageManager.cs",
@@ -471,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "VMEcranTestAlgo.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\VueModeles\\VMEcranTestAlgo.cs",
               "RelativeDocumentMoniker": "TeamsMaker_VM\\VueModeles\\VMEcranTestAlgo.cs",
@@ -483,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "VMEquipe.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\VueModeles\\VMEquipe.cs",
               "RelativeDocumentMoniker": "TeamsMaker_VM\\VueModeles\\VMEquipe.cs",
@@ -495,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "AlgorithmesGloutonCroissant.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgorithmesGloutonCroissant.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Algorithmes\\AlgoTest\\AlgorithmesGloutonCroissant.cs",
@@ -507,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Parseur.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\JeuxTest\\Parseurs\\Parseur.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\JeuxTest\\Parseurs\\Parseur.cs",
@@ -519,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "Classe.cs",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\Personnages\\Classes\\Classe.cs",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\Personnages\\Classes\\Classe.cs",
@@ -531,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "TeamsMaker_METIER.csproj",
               "DocumentMoniker": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj",
               "RelativeDocumentMoniker": "TeamsMaker_METIER\\TeamsMaker_METIER.csproj",

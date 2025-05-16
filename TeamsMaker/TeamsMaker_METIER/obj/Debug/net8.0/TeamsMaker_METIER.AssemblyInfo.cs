@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamsMaker_METIER")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+552f9a37f14346e1f4b984ad9710f1afdefe4dc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15820e7a0fdec69bfe6d577ef1b3798843baf898")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamsMaker_METIER")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamsMaker_METIER")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
