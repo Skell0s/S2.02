@@ -58,7 +58,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             //Personnage personnage = repartition.Equipes[5].Membres[1];
 
 
-            for (int i = 0; i < nbEquipes; i++) 
+            for (int i = 0; i < nbEquipes; i++)
             {
                 if (equipesUtilisees.Contains(i)) continue;
 
@@ -108,15 +108,15 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 >>>>>>> Stashed changes
                 }
 
-                if (Max != -1 && !equipesUtilisees.Contains(Max))
+                if (Max != -1 )
 
-                    {
-                        Equipe meilleureEquipe = new Equipe();
+                {
+                    Equipe meilleureEquipe = new Equipe();
                     foreach (var membre in tableauequipe2[i].Membres)
                         meilleureEquipe.AjouterMembre(membre);
                     foreach (var membre in tableauequipe2[Max].Membres)
                         meilleureEquipe.AjouterMembre(membre);
-                    
+
                     if (meilleureEquipe.EstValide(Probleme.SIMPLE))
                     {
                         repartitionfinal.AjouterEquipe(meilleureEquipe);
@@ -124,7 +124,31 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         equipesUtilisees.Add(Max);
                     }
                 }
+            }
 
+
+            // Étape 4 : Ajouter une équipe restante s'il reste un personnage non utilisé
+            if (equipesUtilisees.Count < nbEquipes)
+            {
+                List<Personnage> restants = new List<Personnage>();
+                for (int i = 0; i < nbEquipes; i++)
+                {
+                    if (!equipesUtilisees.Contains(i))
+                        restants.AddRange(tableauequipe2[i].Membres);
+                }
+
+                Equipe equipeRestante = new Equipe();
+                foreach (var p in restants)
+                    equipeRestante.AjouterMembre(p);
+                if (personnageRestant != null)
+                    equipeRestante.AjouterMembre(personnageRestant);
+                repartitionfinal.AjouterEquipe(equipeRestante);
+            }
+            else if (personnageRestant != null)
+            {
+                Equipe equipeRestant = new Equipe();
+                equipeRestant.AjouterMembre(personnageRestant);
+                repartitionfinal.AjouterEquipe(equipeRestant);
             }
 
 <<<<<<< Updated upstream
