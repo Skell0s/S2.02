@@ -10,7 +10,7 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    public class n_swap : Algorithme
+    public class NSwap : Algorithme
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
