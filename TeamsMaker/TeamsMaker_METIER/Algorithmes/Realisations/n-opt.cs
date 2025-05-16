@@ -24,18 +24,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             int a = 0;
             int z = personnages.Length - 1;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             int b = a;
             int y = z;
 
             // Création d'équipes de 2 : du plus faible au plus fort
             while (a < z)
 
-=======
-
-            // Création d'équipes de 2: du plus faible au plus fort
-            for (int i = 0; i <= personnages.Length - 4; i += 2)
->>>>>>> Stashed changes
 =======
 
             // Création d'équipes de 2: du plus faible au plus fort
@@ -49,7 +43,6 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 z -= 1;
                 a += 1;
             }
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             Personnage personnageRestant = null;
             if (a == z)
@@ -130,32 +123,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         equipesUtilisees.Add(i);
                         equipesUtilisees.Add(Max);
                     }
-=======
-
-
-            Equipe[] tableauequipe2 = repartition2.Equipes;
-            int nbEquipes = tableauequipe2.Length;
-            Repartition repartition4 = new Repartition(jeuTest);
-            
-            HashSet<int> equipesUtilisees = new HashSet<int>();
-
-            for (int i = 0; i < nbEquipes - 1; i++)    // jusqu'a qu'il n'existe plus d'equipe i
-            {
-
-                for (int j = i + 1; j < nbEquipes; j++) // jusqu'a se qu'il n'y a pas de equipe j
-                {
-
->>>>>>> Stashed changes
                 }
 
             }
 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             return repartitionfinal;
-=======
-            return repartition4;
->>>>>>> Stashed changes
 =======
             return repartition4;
 >>>>>>> Stashed changes
