@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,15 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             AlgoExtremeEnPremier algoInitial = new AlgoExtremeEnPremier();
             Repartition repartition = algoInitial.Repartir(jeuTest);
 
             repartition = AppliquerNSwap(repartition, jeuTest);
             repartition = SupprimerEquipeScoreEleve(repartition, jeuTest);
+            stopwatch.Stop();
+            TempsExecution = stopwatch.ElapsedMilliseconds;
 
             return repartition;
         }
