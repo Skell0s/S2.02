@@ -14,124 +14,126 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
     internal class n_opt : Algorithme
     {
+        /* private List<Personnage> equipede2 = new List<Personnage>();
+         private List<Equipe> equipes2;
+
+         public void EquipeDe2(Personnage personnage)
+         {
+             this.equipede2.Add(personnage);
+         }
+         public void AjouterEquipe2(Equipe equipe)
+         {
+             this.equipes2.Add(equipe);
+         }*/
+
         public override Repartition Repartir(JeuTest jeuTest)
         {
-            Repartition repartition = new Repartition(jeuTest);
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
+            Repartition repartition = new Repartition(jeuTest);
 
-            Repartition repartition2 = new Repartition(jeuTest);
-            int a = 0;
-            int z = personnages.Length - 1;
-<<<<<<< Updated upstream
-            int b = a;
-            int y = z;
+            List<Personnage> tanks = new List<Personnage>();
+            List<Personnage> supports = new List<Personnage>();
+            List<Personnage> dps = new List<Personnage>();
 
-            // Création d'équipes de 2 : du plus faible au plus fort
-            while (a < z)
+            foreach (var p in personnages)
+            {
+                switch (p.RolePrincipal)
+                {
+                    case Role.TANK: tanks.Add(p); break;
+                    case Role.SUPPORT: supports.Add(p); break;
+                    case Role.DPS: dps.Add(p); break;
+                }
+            }
 
-=======
+            tanks.Sort(new ComparateurPersonnageParNiveauPrincipal());
+            supports.Sort(new ComparateurPersonnageParNiveauPrincipal());
+            dps.Sort(new ComparateurPersonnageParNiveauPrincipal());
 
-            // Création d'équipes de 2: du plus faible au plus fort
-            for (int i = 0; i <= personnages.Length - 4; i += 2)
->>>>>>> Stashed changes
+            int d = dps.Count - 1;
+            int t = 0;
+            int s = 0;
+
+            for (int i = 0; i <= personnages.Length - 4; i += 4)
             {
                 Equipe equipeDe2 = new Equipe();
-                equipeDe2.AjouterMembre(personnages[a]);
-                equipeDe2.AjouterMembre(personnages[z]);
-                repartition2.AjouterEquipe(equipeDe2);
-                z -= 1;
-                a += 1;
+                Equipe equipeDe4 = new Equipe();
+                // Ajouter Tank, DPS, Support, DPS
+                equipeDe2.AjouterMembre(tanks[t]);
+                equipeDe2.AjouterMembre(dps[d]);
+
+                equipeDe4.AjouterMembre(tanks[t]);
+                equipeDe4.AjouterMembre(dps[d]);
+                //repartition.AjouterEquipe(equipeDe2);
+
+                d -= 1; t += 1;
+
+                equipeDe2.AjouterMembre(supports[s]);
+                equipeDe2.AjouterMembre(dps[d]);
+
+                equipeDe4.AjouterMembre(supports[s]);
+                equipeDe4.AjouterMembre(dps[d]);
+                //repartition.AjouterEquipe(equipeDe2);
+
+                d -= 1; s += 1;
+
+
+                // Créer équipe de 2 à partir du tank et du premier dps
+
+                //////////////////////////////////////////////////////////////////////////////////////repartition.AjouterEquipe(equipeDe4);
             }
-<<<<<<< Updated upstream
-            Personnage personnageRestant = null;
-            if (a == z)
-                personnageRestant = personnages[a];
-            /////////////////////////////////////////////////////////
+            Equipe[] tableauequipe = repartition.Equipes;
+            int nbEquipes = tableauequipe.Length;
 
-            Equipe[] tableauequipe2 = repartition2.Equipes;
-            int nbEquipes = tableauequipe2.Length;
-
-            Repartition repartitionfinal = new Repartition(jeuTest);
-            HashSet<int> equipesUtilisees = new HashSet<int>();
-
-            //Personnage personnage = repartition.Equipes[5].Membres[1];
-
-
-            for (int i = 0; i < nbEquipes; i++) 
+            for (int i = 0; i < nbEquipes - 1; i++)
             {
-                if (equipesUtilisees.Contains(i)) continue;
-
-                int Max = 1;
-                int cible = 0;
-
                 for (int j = i + 1; j < nbEquipes; j++)
                 {
-                    if (equipesUtilisees.Contains(j)) continue;
+                    // Comparer deux équipes par leur score sur le problème SIMPLE
+                    var scoreI = tableauequipe[i].Score(Probleme.SIMPLE);
+                    var scoreJ = tableauequipe[j].Score(Probleme.SIMPLE);
 
-                    List<Personnage> fusionj = new List<Personnage>();
-                    fusionj.AddRange(tableauequipe2[i].Membres);
-                    fusionj.AddRange(tableauequipe2[Max].Membres);
-
-                    List<Personnage> fusionI = new List<Personnage>();
-                    fusionI.AddRange(tableauequipe2[i].Membres);
-                    fusionI.AddRange(tableauequipe2[j].Membres);
-
-                    if (fusionI.Count != 4) continue;
-
-                    int sommei = fusionI.Sum(p => p.LvlPrincipal);
-                    double diffi = Math.Abs(200 - sommei);
-
-                    int sommej = fusionj.Sum(p => p.LvlPrincipal);
-                    double diffj = Math.Abs(200 - sommej);
-
-                    if (Math.Abs(diffj - cible) < Math.Abs(diffi - cible))
+                    if (scoreI > scoreJ)
                     {
-
-                        Max = j;
-                    }
-=======
-
-
-            Equipe[] tableauequipe2 = repartition2.Equipes;
-            int nbEquipes = tableauequipe2.Length;
-            Repartition repartition4 = new Repartition(jeuTest);
-            
-            HashSet<int> equipesUtilisees = new HashSet<int>();
-
-            for (int i = 0; i < nbEquipes - 1; i++)    // jusqu'a qu'il n'existe plus d'equipe i
-            {
-
-                for (int j = i + 1; j < nbEquipes; j++) // jusqu'a se qu'il n'y a pas de equipe j
-                {
-
->>>>>>> Stashed changes
-                }
-
-                if (Max != -1 && !equipesUtilisees.Contains(Max))
-
-                    {
-                        Equipe meilleureEquipe = new Equipe();
-                    foreach (var membre in tableauequipe2[i].Membres)
-                        meilleureEquipe.AjouterMembre(membre);
-                    foreach (var membre in tableauequipe2[Max].Membres)
-                        meilleureEquipe.AjouterMembre(membre);
-                    
-                    if (meilleureEquipe.EstValide(Probleme.SIMPLE))
-                    {
-                        repartitionfinal.AjouterEquipe(meilleureEquipe);
-                        equipesUtilisees.Add(i);
-                        equipesUtilisees.Add(Max);
+                        // Exemple : afficher ou mémoriser la meilleure équipe
+                        repartition.AjouterEquipe(tableauequipe[i]);
                     }
                 }
-
             }
 
-<<<<<<< Updated upstream
-            return repartitionfinal;
-=======
-            return repartition4;
->>>>>>> Stashed changes
+            return repartition;
         }
     }
 }
+            /*
+             
+            Equipe[] tableauequipe = repartition.Equipes;
+
+            int boucle = tableauequipe.Length - 1; // nombre de groupe 
+
+
+            for (int debut = 0; debut < boucle; debut++) //toute les équipe de équipe une a dernier
+            {
+                for (int e = 0; e < boucle; debut++) //permet de faire une boucle pour comparé chaque truc
+                {
+                    //crée une équipe avec léquipe de deux et une autre zéquipe de deux
+                    
+                    if (tableauequipe[boucle] == tableauequipe[e]) //si le score de debut est supérieur au score du nouveau groupe de deux   (equipe.Score(Probleme.SIMPLE) > )
+                    {
+                        
+                    }
+                }
+
+
+
+            }
+
+
+            //Equipe derniereEquipe = tableauequipe.Last();
+            //Personnage dernierPerso = derniereEquipe.Membres.Last();
+
+            // prendre la première équipe dans un for (equipe.Score(Probleme.SIMPLE) <= 400)
+            return repartition;
+        }
+    }
+}*/
