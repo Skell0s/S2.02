@@ -21,7 +21,8 @@ namespace TeamsMaker_METIER.Algorithmes
         AlgoPRogressif,
         n_opt,
         AlgoExtremeEnPremier_niv2,
-        NSWAP
+        NSWAP,
+        algoniv3V1
     }
 
 
@@ -47,6 +48,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.AlgoPRogressif: res = "Algorithme progressif"; break;
                 case NomAlgorithme.n_opt: res = "Algorithme n-opt"; break;
                 case NomAlgorithme.NSWAP: res = "Algorithme n-swap"; break;
+                case NomAlgorithme.algoniv3V1: res = "Algorithme niv3v1"; break;
             }
             
 

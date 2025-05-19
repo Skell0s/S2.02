@@ -1,5 +1,7 @@
-﻿using System.Data;
-using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using TeamsMaker_METIER.Algorithmes;
 using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages;
@@ -14,76 +16,83 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
         {
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
+
             Repartition repartition = new Repartition(jeuTest);
 
-            HashSet<Personnage> dejaUtilises = new HashSet<Personnage>();
+            // Séparation des personnages en deux groupes
+            List<Personnage> avecRoleSecondaire = new List<Personnage>();
+            List<Personnage> sansRoleSecondaire = new List<Personnage>();
 
-            bool formationPossible = true;
-            while (formationPossible)
+            foreach (var p in personnages)
             {
-                for (int i = 0; i < personnages.Length; i++)
+                if (p.RoleSecondaire == Role.TANK || p.RoleSecondaire == Role.SUPPORT || p.RoleSecondaire == Role.DPS)
+                    avecRoleSecondaire.Add(p);
+                else
+                    sansRoleSecondaire.Add(p);
+            }
+
+            // ---- Phase 1 : crée des liste de de tank dps et de support ----
+            List<Personnage> tanks = new List<Personnage>();
+            List<Personnage> supports = new List<Personnage>();
+            List<Personnage> dps = new List<Personnage>();
+
+            foreach (var p in sansRoleSecondaire)
+            {
+                switch (p.RolePrincipal)
                 {
-                    if (dejaUtilises.Contains(personnages[i])) continue;
-
-                    Equipe equipe = new Equipe();
-                    int nbtank = 0, nbsupport = 0, nbdps = 0;
-                    for (int j = i; j < personnages.Length && equipe.Membres.Length < 4; j++)
-                    {
-                        bool ajoute = false;
-
-                        switch (personnages[j].RolePrincipal)
-                        {
-                            case Role.TANK when nbtank < 1:
-                                nbtank++;
-                                ajoute = true;
-                                break;
-                            case Role.SUPPORT when nbsupport < 1:
-                                nbsupport++;
-                                ajoute = true;
-                                break;
-                            case Role.DPS when nbdps < 2:
-                                nbdps++;
-                                ajoute = true;
-                                break;
-                            default:
-                                switch (personnages[j].RoleSecondaire)
-                                {
-                                    case Role.TANK when nbtank < 1:
-                                        nbtank++;
-                                        ajoute = true;
-                                        break;
-                                    case Role.SUPPORT when nbsupport < 1:
-                                        nbsupport++;
-                                        ajoute = true;
-                                        break;
-                                    case Role.DPS when nbdps < 2:
-                                        nbdps++;
-                                        ajoute = true;
-                                        break;
-                                }
-                                break;
-                        }
-
-                        if (ajoute)
-                        {
-                            equipe.AjouterMembre(personnages[j]);
-                        }
-
-                    }
-                    if (equipe.EstValide(Probleme.ROLESECONDAIRE))
-                    {
-                        repartition.AjouterEquipe(equipe);
-                        foreach (var p in equipe.Membres)
-                        {
-                            dejaUtilises.Add(p);
-                        }
-                    }
-                    else
-                    {
-                        formationPossible = false;
-                    }
+                    case Role.TANK: tanks.Add(p); break;
+                    case Role.SUPPORT: supports.Add(p); break;
+                    case Role.DPS: dps.Add(p); break;
                 }
             }
+
+            tanks.Sort(new ComparateurPersonnageParNiveauPrincipal());
+            supports.Sort(new ComparateurPersonnageParNiveauPrincipal());
+            dps.Sort(new ComparateurPersonnageParNiveauPrincipal());
+
+            //
+
+            int t = 0, s = 0, d = dps.Count - 1;
+
+            while (t < tanks.Count && s < supports.Count && d - 1 >= 0)
+            {
+                Equipe equipe = new Equipe();
+                equipe.AjouterMembre(tanks[t++]);
+                equipe.AjouterMembre(supports[s++]);
+                equipe.AjouterMembre(dps[d--]);
+                equipe.AjouterMembre(dps[d--]);
+
+                repartition.AjouterEquipe(equipe);
+            }
+
+            // Ajouter les restants de la 1ère phase
+            List<Personnage> restants = new List<Personnage>();
+            while (t < tanks.Count) restants.Add(tanks[t++]);
+            while (s < supports.Count) restants.Add(supports[s++]);
+            while (d >= 0) restants.Add(dps[d--]);
+
+            if (restants.Count > 0)
+            {
+                Equipe equipeRestante = new Equipe();
+                foreach (var p in restants)
+                    equipeRestante.AjouterMembre(p);
+                repartition.AjouterEquipe(equipeRestante);
+            }
+
+            // ---- Phase 2 : équipe avec ceux qui n'ont PAS de rôle secondaire ----
+            if (avecRoleSecondaire.Count > 0)
+            {
+                for (int i = 0; i < avecRoleSecondaire.Count; i += 4)
+                {
+                    Equipe equipe = new Equipe();
+                    for (int j = i; j < i + 4 && j < avecRoleSecondaire.Count; j++)
+                    {
+                        equipe.AjouterMembre(avecRoleSecondaire[j]);
+                    }
+                    //repartition.AjouterEquipe(equipe);
+                }
+            }
+
             return repartition;
         }
     }
