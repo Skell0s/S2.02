@@ -9,12 +9,12 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    public class n_swap : Algorithme
+    public class NSwap : Algorithme
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
-            AlgorithmesProgressif algoInitial = new AlgorithmesProgressif();
-            Repartition repartition = algoInitial.AlgorithmeProgressif(jeuTest);
+            AlgoExtremeEnPremier algoInitial = new AlgoExtremeEnPremier();
+            Repartition repartition = algoInitial.Repartir(jeuTest);
 
             repartition = AppliquerNSwap(repartition, jeuTest);
             repartition = SupprimerEquipeScoreEleve(repartition, jeuTest);
