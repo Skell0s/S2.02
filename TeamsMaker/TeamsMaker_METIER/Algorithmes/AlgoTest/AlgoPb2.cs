@@ -34,11 +34,6 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
                 }
             }
 
-            // Trier les listes par niveau principal
-            tanks.Sort(new ComparateurPersonnageParNiveauPrincipal());
-            supports.Sort(new ComparateurPersonnageParNiveauPrincipal());
-            dps.Sort(new ComparateurPersonnageParNiveauPrincipal());
-
             HashSet<Personnage> dejaUtilises = new HashSet<Personnage>();
             bool formationPossible = true;
 

@@ -42,6 +42,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.n_opt: res = new n_opt(); break;
                 case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = new AlgoExtremeEnPremier_niv2(); break;
                 case NomAlgorithme.NSWAP: res = new NSwap(); break;
+                case NomAlgorithme.AlgoTestPbNiv2: res = new PbNiv2(); break;
             }
             return res;
         }
