@@ -16,9 +16,9 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
 
-            List<Personnage> tanks = new List<Personnage>();
-            List<Personnage> supports = new List<Personnage>();
-            List<Personnage> dps = new List<Personnage>();
+            List<Personnage> tanks = new();
+            List<Personnage> supports = new();
+            List<Personnage> dps = new();
 
             foreach (var p in personnages)
             {
@@ -36,71 +36,64 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             int t = 0, s = 0, d = dps.Count - 1;
 
-            Repartition repartition2td = new Repartition(jeuTest);
-            Repartition repartition2sd = new Repartition(jeuTest);
+            var binomesTD = new List<(Equipe equipe, int niveau)>();
+            var binomesSD = new List<(Equipe equipe, int niveau)>();
 
-            // Création des binômes TD
             while (t < tanks.Count && d >= 0)
             {
-                Equipe equipe = new Equipe();
-                equipe.AjouterMembre(tanks[t++]);
-                equipe.AjouterMembre(dps[d--]);
-                repartition2td.AjouterEquipe(equipe);
+                Equipe e = new();
+                e.AjouterMembre(tanks[t++]);
+                e.AjouterMembre(dps[d--]);
+                int niveau = e.Membres.Sum(p => p.LvlPrincipal);
+                binomesTD.Add((e, niveau));
             }
 
-            // Création des binômes SD
             while (s < supports.Count && d >= 0)
             {
-                Equipe equipe = new Equipe();
-                equipe.AjouterMembre(supports[s++]);
-                equipe.AjouterMembre(dps[d--]);
-                repartition2sd.AjouterEquipe(equipe);
+                Equipe e = new();
+                e.AjouterMembre(supports[s++]);
+                e.AjouterMembre(dps[d--]);
+                int niveau = e.Membres.Sum(p => p.LvlPrincipal);
+                binomesSD.Add((e, niveau));
             }
 
-            List<Equipe> toutesEquipesTD = repartition2td.Equipes.ToList();
-            List<Equipe> toutesEquipesSD = repartition2sd.Equipes.ToList();
+            // Trie des binômes SD par niveau croissant
+            binomesSD = binomesSD.OrderBy(x => x.niveau).ToList();
 
-            Repartition repartitionFinale = new Repartition(jeuTest);
-            HashSet<int> equipesTDUtilisees = new HashSet<int>();
-            HashSet<int> equipesSDUtilisees = new HashSet<int>();
+            var repartitionFinale = new Repartition(jeuTest);
+            var sdUtilises = new HashSet<int>();
 
-            // Optimisation à la n_opt : pour chaque TD, on cherche le meilleur SD
-            for (int i = 0; i < toutesEquipesTD.Count; i++)
+            foreach (var (equipeTD, niveauTD) in binomesTD)
             {
-                if (equipesTDUtilisees.Contains(i)) continue;
-
-                int meilleurIndex = -1;
+                int niveauRecherche = 200 - niveauTD;
+                int meilleurIndice = -1;
                 double meilleureDiff = double.MaxValue;
 
-                for (int j = 0; j < toutesEquipesSD.Count; j++)
+                for (int i = 0; i < binomesSD.Count; i++)
                 {
-                    if (equipesSDUtilisees.Contains(j)) continue;
+                    if (sdUtilises.Contains(i)) continue;
 
-                    var fusion = toutesEquipesTD[i].Membres.Concat(toutesEquipesSD[j].Membres).ToList();
-
-                    if (fusion.Count != 4) continue;
-
-                    double diff = Math.Abs((50 - fusion.Sum(p => p.LvlPrincipal)) * (50 - fusion.Sum(p => p.LvlPrincipal)));
+                    double diff = Math.Abs(binomesSD[i].niveau - niveauRecherche);
                     if (diff < meilleureDiff)
                     {
                         meilleureDiff = diff;
-                        meilleurIndex = j;
+                        meilleurIndice = i;
                     }
+
+                    // Petit bonus : early break si diff = 0
+                    if (diff == 0) break;
                 }
 
-                if (meilleurIndex != -1)
+                if (meilleurIndice != -1)
                 {
-                    var fusionEquipe = new Equipe();
-                    foreach (var p in toutesEquipesTD[i].Membres)
-                        fusionEquipe.AjouterMembre(p);
-                    foreach (var p in toutesEquipesSD[meilleurIndex].Membres)
-                        fusionEquipe.AjouterMembre(p);
+                    var fusion = new Equipe();
+                    foreach (var p in equipeTD.Membres) fusion.AjouterMembre(p);
+                    foreach (var p in binomesSD[meilleurIndice].equipe.Membres) fusion.AjouterMembre(p);
 
-                    if (fusionEquipe.EstValide(Probleme.SIMPLE))
+                    if (fusion.EstValide(Probleme.SIMPLE))
                     {
-                        repartitionFinale.AjouterEquipe(fusionEquipe);
-                        equipesTDUtilisees.Add(i);
-                        equipesSDUtilisees.Add(meilleurIndex);
+                        repartitionFinale.AjouterEquipe(fusion);
+                        sdUtilises.Add(meilleurIndice);
                     }
                 }
             }
@@ -109,10 +102,3 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
         }
     }
 }
-
-//                    if (fusion.Count == 4)
-//{
-//    double totalLvl = fusion.Sum(p => p.LvlPrincipal);
-//    double moyenne = totalLvl / 4.0;
-
-//    if (Math.Abs((50 - moyenne) * (50 - moyenne)) <= 400) //          (moyenne - 50)^2

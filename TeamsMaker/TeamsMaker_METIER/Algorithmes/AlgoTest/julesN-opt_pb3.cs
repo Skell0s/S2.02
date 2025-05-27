@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages.Classes;
@@ -16,92 +14,57 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Personnage[] personnages = jeuTest.Personnages;
-
             Repartition repartition = new Repartition(jeuTest);
 
-            // ----------------------------------------------------------------------------------------étape 1 liste de tous les personnages doublon des perso avec role segondaire
-            List<Personnage> avecRoleSecondaire = new List<Personnage>();
-            List<Personnage> sansRoleSecondaire = new List<Personnage>();
-            List<Personnage> doublonroleSecondaire = new List<Personnage>();
+            // Étape 1 : Générer toutes les combinaisons possibles de 4 personnages distincts
+            var toutesCombinaisons = GetCombinations(personnages.ToList(), 4);
 
-            foreach (var p in personnages)
+            HashSet<Personnage> personnagesUtilises = new HashSet<Personnage>();
+
+            foreach (var combinaison in toutesCombinaisons)
             {
-                if (p.RoleSecondaire == Role.TANK || p.RoleSecondaire == Role.SUPPORT || p.RoleSecondaire == Role.DPS)
-                {
-                    avecRoleSecondaire.Add(p);   //ajoute personnage a la liste avecRoleSecondaire
-                    doublonroleSecondaire.Add(p);
-                }
-                else
-                    sansRoleSecondaire.Add(p);
-            }
+                // Vérifier si un personnage est déjà utilisé
+                if (combinaison.Any(p => personnagesUtilises.Contains(p)))
+                    continue;
 
-
-            List<Personnage> tanks = new List<Personnage>();
-            List<Personnage> supports = new List<Personnage>();
-            List<Personnage> dps = new List<Personnage>();
-
-            //on tri par role en crée avec les doublon
-            foreach (var p in sansRoleSecondaire)
-            {
-                switch (p.RolePrincipal)
-                {
-                    case Role.TANK: tanks.Add(p); break;
-                    case Role.SUPPORT: supports.Add(p); break;
-                    case Role.DPS: dps.Add(p); break;
-                }
-            }
-            foreach (var p in avecRoleSecondaire)
-            {
-                switch (p.RolePrincipal)
-                {
-                    case Role.TANK: tanks.Add(p); break;
-                    case Role.SUPPORT: supports.Add(p); break;
-                    case Role.DPS: dps.Add(p); break;
-                }
-            }
-            foreach (var p in doublonroleSecondaire)
-            {
-                switch (p.RoleSecondaire)
-                {
-                    case Role.TANK: tanks.Add(p); break;
-                    case Role.SUPPORT: supports.Add(p); break;
-                    case Role.DPS: dps.Add(p); break;
-                }
-            }
-            //---------------------------------------------------------------------------------------------------étape 2 tri création des equipes
-            tanks.Sort(new ComparateurPersonnageParNiveauPrincipal());
-            supports.Sort(new ComparateurPersonnageParNiveauPrincipal());
-            dps.Sort(new ComparateurPersonnageParNiveauPrincipal());
-
-            // on fais un trie par role et on les mets dans la liste
-
-            int t = 0, s = 0, d = dps.Count - 1;
-
-            int total = tanks.Count + supports.Count + dps.Count;
-
-            while (t < tanks.Count && s < supports.Count && d - 1 >= 0)
-            {
+                // Créer l'équipe et vérifier sa validité (en testant rôles secondaires)
                 Equipe equipe = new Equipe();
-                equipe.AjouterMembre(tanks[t++]);
-                equipe.AjouterMembre(supports[s++]);
-                equipe.AjouterMembre(dps[d--]);
-                equipe.AjouterMembre(dps[d--]);
+                foreach (var p in combinaison)
+                    equipe.AjouterMembre(p);
 
-                repartition.AjouterEquipe(equipe);
+                if (equipe.EstValide(Probleme.ROLESECONDAIRE))
+                {
+                    repartition.AjouterEquipe(equipe);
+                    foreach (var p in combinaison)
+                        personnagesUtilises.Add(p); // Marquer comme utilisé
+                }
             }
 
-            //--------------------------------------------------étape 3 si le score de l'équipe est meilleur avecc le role principal supprimé le doublon
-            if (tanks.Count > 0)//
-            { }
-
-            // -------------------- Étape 4 : Nettoyage des équipes incomplètes + n-opt fusion -----------------------
-
-
-
-            // Return final : sans doublons, équipes complètes, après nettoyage
             return repartition;
+        }
 
+        // Génère toutes les combinaisons de 4 personnages parmi la liste
+        private List<List<Personnage>> GetCombinations(List<Personnage> source, int taille)
+        {
+            var result = new List<List<Personnage>>();
+            Combiner(source, new List<Personnage>(), 0, taille, result);
+            return result;
+        }
 
+        private void Combiner(List<Personnage> source, List<Personnage> current, int index, int taille, List<List<Personnage>> result)
+        {
+            if (current.Count == taille)
+            {
+                result.Add(new List<Personnage>(current));
+                return;
+            }
+
+            for (int i = index; i < source.Count; i++)
+            {
+                current.Add(source[i]);
+                Combiner(source, current, i + 1, taille, result);
+                current.RemoveAt(current.Count - 1);
+            }
         }
     }
 }
