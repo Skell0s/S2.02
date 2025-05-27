@@ -51,9 +51,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     if (equipesUtilisees.Contains(j)) continue;
 
                     var fusion = tableauequipe2[i].Membres.Concat(tableauequipe2[j].Membres).ToList();
+
                     if (fusion.Count != 4) continue;
 
-                    double diff = Math.Abs(200 - fusion.Sum(p => p.LvlPrincipal));
+                    //double diff = Math.Abs(200 - fusion.Sum(p => p.LvlPrincipal));
+
+                    double diff = Math.Abs((50 - fusion.Sum(p => p.LvlPrincipal)) * (50 - fusion.Sum(p => p.LvlPrincipal)));
                     if (diff < meilleureDiff)
                     {
                         meilleureDiff = diff;

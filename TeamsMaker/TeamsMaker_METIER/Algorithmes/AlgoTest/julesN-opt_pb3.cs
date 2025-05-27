@@ -1,41 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using TeamsMaker_METIER.Algorithmes;
+using System.Text;
+using System.Threading.Tasks;
 using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
-using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Personnages.Classes;
+using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Problemes;
 
-namespace TeamsMaker_METIER.Algorithmes.Realisations
+namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
-    public class AlgoPb3V1 : Algorithme
+    internal class julesN_opt_pb3 : Algorithme
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Personnage[] personnages = jeuTest.Personnages;
-            Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
 
             Repartition repartition = new Repartition(jeuTest);
 
-            // Séparation des personnages en deux groupes
+            // ----------------------------------------------------------------------------------------étape 1 liste de tous les personnages doublon des perso avec role segondaire
             List<Personnage> avecRoleSecondaire = new List<Personnage>();
             List<Personnage> sansRoleSecondaire = new List<Personnage>();
+            List<Personnage> doublonroleSecondaire = new List<Personnage>();
 
             foreach (var p in personnages)
             {
                 if (p.RoleSecondaire == Role.TANK || p.RoleSecondaire == Role.SUPPORT || p.RoleSecondaire == Role.DPS)
-                    avecRoleSecondaire.Add(p);
+                {
+                    avecRoleSecondaire.Add(p);   //ajoute personnage a la liste avecRoleSecondaire
+                    doublonroleSecondaire.Add(p);
+                }
                 else
                     sansRoleSecondaire.Add(p);
             }
 
-            // ---- Phase 1 : crée des liste de de tank dps et de support ----
+
             List<Personnage> tanks = new List<Personnage>();
             List<Personnage> supports = new List<Personnage>();
             List<Personnage> dps = new List<Personnage>();
 
+            //on tri par role en crée avec les doublon
             foreach (var p in sansRoleSecondaire)
             {
                 switch (p.RolePrincipal)
@@ -45,14 +50,34 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     case Role.DPS: dps.Add(p); break;
                 }
             }
-
+            foreach (var p in avecRoleSecondaire)
+            {
+                switch (p.RolePrincipal)
+                {
+                    case Role.TANK: tanks.Add(p); break;
+                    case Role.SUPPORT: supports.Add(p); break;
+                    case Role.DPS: dps.Add(p); break;
+                }
+            }
+            foreach (var p in doublonroleSecondaire)
+            {
+                switch (p.RoleSecondaire)
+                {
+                    case Role.TANK: tanks.Add(p); break;
+                    case Role.SUPPORT: supports.Add(p); break;
+                    case Role.DPS: dps.Add(p); break;
+                }
+            }
+            //---------------------------------------------------------------------------------------------------étape 2 tri création des equipes
             tanks.Sort(new ComparateurPersonnageParNiveauPrincipal());
             supports.Sort(new ComparateurPersonnageParNiveauPrincipal());
             dps.Sort(new ComparateurPersonnageParNiveauPrincipal());
 
-            //
+            // on fais un trie par role et on les mets dans la liste
 
             int t = 0, s = 0, d = dps.Count - 1;
+
+            int total = tanks.Count + supports.Count + dps.Count;
 
             while (t < tanks.Count && s < supports.Count && d - 1 >= 0)
             {
@@ -65,35 +90,18 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 repartition.AjouterEquipe(equipe);
             }
 
-            // Ajouter les restants de la 1ère phase
-            List<Personnage> restants = new List<Personnage>();
-            while (t < tanks.Count) restants.Add(tanks[t++]);
-            while (s < supports.Count) restants.Add(supports[s++]);
-            while (d >= 0) restants.Add(dps[d--]);
+            //--------------------------------------------------étape 3 si le score de l'équipe est meilleur avecc le role principal supprimé le doublon
+            if (tanks.Count > 0)//
+            { }
 
-            if (restants.Count > 0)
-            {
-                Equipe equipeRestante = new Equipe();
-                foreach (var p in restants)
-                    equipeRestante.AjouterMembre(p);
-                repartition.AjouterEquipe(equipeRestante);
-            }
+            // -------------------- Étape 4 : Nettoyage des équipes incomplètes + n-opt fusion -----------------------
 
-            // ---- Phase 2 : équipe avec ceux qui n'ont PAS de rôle secondaire ----
-            if (avecRoleSecondaire.Count > 0)
-            {
-                for (int i = 0; i < avecRoleSecondaire.Count; i += 4)
-                {
-                    Equipe equipe = new Equipe();
-                    for (int j = i; j < i + 4 && j < avecRoleSecondaire.Count; j++)
-                    {
-                        equipe.AjouterMembre(avecRoleSecondaire[j]);
-                    }
-                    //repartition.AjouterEquipe(equipe);
-                }
-            }
 
+
+            // Return final : sans doublons, équipes complètes, après nettoyage
             return repartition;
+
+
         }
     }
 }
