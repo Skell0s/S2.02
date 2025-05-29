@@ -40,7 +40,7 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
             int t = 0;
             int s = 0;
 
-            for (int i = 0; i <= personnages.Length - 4; i += 4)
+            while (t < tanks.Count && s < supports.Count && d - 1 >= 0)
             {
                 Equipe equipe = new Equipe();
 
