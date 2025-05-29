@@ -38,10 +38,11 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.LEVEL_BALANCING: res = new Level_balancing(); break;
                 case NomAlgorithme.ALGOROLEPRINCIPALE: res = new AlgoPb2(); break;
                 case NomAlgorithme.ExtremePrem: res = new AlgoExtremeEnPremier(); break; 
-                case NomAlgorithme.AlgoJulesPRBLÉME2: res = new algopb2jul(); break;
+                case NomAlgorithme.AlgoJulesPRBLÉME2: res = new algopb2gloutonjul(); break; 
                 case NomAlgorithme.AlgoPRogressif: res = new AlgorithmesProgressif(); break;
 
                 case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = new AlgoExtremeEnPremier_niv2(); break;
+                case NomAlgorithme.Algoextrremeniv3: res = new extremepremierniv3(); break;
                     
                 case NomAlgorithme.algoniv3V1: res = new AlgoPb3V1(); break;
                 case NomAlgorithme.AlgoJulesPB3: res = new julesN_opt_pb3(); break;
@@ -49,6 +50,7 @@ namespace TeamsMaker_METIER.Algorithmes
             }
             return res;
         }
+       
         #endregion
     }
 }

@@ -23,7 +23,8 @@ namespace TeamsMaker_METIER.Algorithmes
         NSWAP,
         algoniv3V1,
         AlgoJulesPB3,
-        n_opt_level_2
+        n_opt_level_2,
+        Algoextrremeniv3
     }
 
 
@@ -42,6 +43,7 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant----TEST----"; break;
                 case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing----TEST----"; break;
                 case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal----TEST----"; break;
+                
                 case NomAlgorithme.AlgoJulesPRBLÉME2: res = "Glouton niv2 Jules----TEST----"; break;
 
                 case NomAlgorithme.n_opt: res = "Algorithme n-opt"; break;
@@ -50,15 +52,16 @@ namespace TeamsMaker_METIER.Algorithmes
 
                 case NomAlgorithme.ExtremePrem: res = "Extremes en premier"; break;
                 case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = "Extremes en premier level 2"; break;
+                case NomAlgorithme.Algoextrremeniv3: res = "Extremes en premier level 3"; break;
 
                 case NomAlgorithme.AlgoPRogressif: res = "Algorithme progressif"; break;
 
                 case NomAlgorithme.NSWAP: res = "Algorithme n-swap"; break;
 
                 case NomAlgorithme.algoniv3V1: res = "Algorithme niv3v1 mathieu"; break;
-
+                    
             }
-            
+
 
             return res;
         }
