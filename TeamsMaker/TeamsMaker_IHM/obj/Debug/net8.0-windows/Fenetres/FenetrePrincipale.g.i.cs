@@ -61,7 +61,7 @@ namespace TeamsMaker_IHM {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TeamsMaker_IHM;V1.0.0.0;component/fenetres/fenetreprincipale.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TeamsMaker_IHM;component/fenetres/fenetreprincipale.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Fenetres\FenetrePrincipale.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

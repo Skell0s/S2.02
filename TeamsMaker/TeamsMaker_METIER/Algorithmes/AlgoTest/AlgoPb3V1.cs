@@ -6,7 +6,7 @@ using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Personnages.Classes;
 using TeamsMaker_METIER.Problemes;
 
-namespace TeamsMaker_METIER.Algorithmes.Realisations
+namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
     public class AlgoPb3V1 : Algorithme
     {
@@ -18,11 +18,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             return repartition;
         }
 
-        private Repartition AlgoPb3(Repartition r, JeuTest jeuTest) 
+        private Repartition AlgoPb3(Repartition r, JeuTest jeuTest)
         {
             List<Personnage> tanks = new List<Personnage>();
             List<Personnage> supports = new List<Personnage>();
             List<Personnage> dps = new List<Personnage>();
+            Repartition repartition = new Repartition(jeuTest);
 
             foreach (var p in jeuTest.Personnages)
             {
@@ -43,7 +44,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 }
             }
 
-            
+
             return repartition;
         }
     }
