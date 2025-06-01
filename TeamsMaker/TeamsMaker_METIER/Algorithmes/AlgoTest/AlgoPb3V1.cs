@@ -12,78 +12,39 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
-            Personnage[] personnages = jeuTest.Personnages;
-            Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
+            Repartition repartition = new Repartition(jeuTest);
+            repartition = AlgoPb3(repartition, jeuTest);
+
+            return repartition;
+        }
+
+        private Repartition AlgoPb3(Repartition r, JeuTest jeuTest)
+        {
+            List<Personnage> tanks = new List<Personnage>();
+            List<Personnage> supports = new List<Personnage>();
+            List<Personnage> dps = new List<Personnage>();
             Repartition repartition = new Repartition(jeuTest);
 
-            HashSet<Personnage> dejaUtilises = new HashSet<Personnage>();
-
-            bool formationPossible = true;
-            while (formationPossible)
+            foreach (var p in jeuTest.Personnages)
             {
-                for (int i = 0; i < personnages.Length; i++)
+                switch (p.RolePrincipal)
                 {
-                    if (dejaUtilises.Contains(personnages[i])) continue;
-
-                    Equipe equipe = new Equipe();
-                    int nbtank = 0, nbsupport = 0, nbdps = 0;
-                    for (int j = i; j < personnages.Length && equipe.Membres.Length < 4; j++)
+                    case Role.TANK: tanks.Add(p); break;
+                    case Role.SUPPORT: supports.Add(p); break;
+                    case Role.DPS: dps.Add(p); break;
+                }
+                if (p.RoleSecondaire != Role.AUCUN)
+                {
+                    switch (p.RoleSecondaire)
                     {
-                        bool ajoute = false;
-
-                        switch (personnages[j].RolePrincipal)
-                        {
-                            case Role.TANK when nbtank < 1:
-                                nbtank++;
-                                ajoute = true;
-                                break;
-                            case Role.SUPPORT when nbsupport < 1:
-                                nbsupport++;
-                                ajoute = true;
-                                break;
-                            case Role.DPS when nbdps < 2:
-                                nbdps++;
-                                ajoute = true;
-                                break;
-                            default:
-                                switch (personnages[j].RoleSecondaire)
-                                {
-                                    case Role.TANK when nbtank < 1:
-                                        nbtank++;
-                                        ajoute = true;
-                                        break;
-                                    case Role.SUPPORT when nbsupport < 1:
-                                        nbsupport++;
-                                        ajoute = true;
-                                        break;
-                                    case Role.DPS when nbdps < 2:
-                                        nbdps++;
-                                        ajoute = true;
-                                        break;
-                                }
-                                break;
-                        }
-
-                        if (ajoute)
-                        {
-                            equipe.AjouterMembre(personnages[j]);
-                        }
-
-                    }
-                    if (equipe.EstValide(Probleme.ROLESECONDAIRE))
-                    {
-                        repartition.AjouterEquipe(equipe);
-                        foreach (var p in equipe.Membres)
-                        {
-                            dejaUtilises.Add(p);
-                        }
-                    }
-                    else
-                    {
-                        formationPossible = false;
+                        case Role.TANK: tanks.Add(p); break;
+                        case Role.SUPPORT: supports.Add(p); break;
+                        case Role.DPS: dps.Add(p); break;
                     }
                 }
             }
+
+
             return repartition;
         }
     }
