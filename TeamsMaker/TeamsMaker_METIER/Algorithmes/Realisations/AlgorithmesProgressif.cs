@@ -13,6 +13,11 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
     public class AlgoProgressif : Algorithme
     {
+        /// <summary>
+        /// Algorithme de répartition des personnages en équipes de 4, en comparant les niveaux principaux sans prendre en compte les rôles.
+        /// </summary>
+        /// <param name="jeuTest"></param>
+        /// <returns></returns>
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Stopwatch stopwatch = new Stopwatch();
@@ -39,9 +44,9 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     Personnage meilleurCandidat = null;
                     double meilleurEcart = double.MaxValue;
 
-                    foreach (var candidat in disponibles)
+                    foreach (Personnage candidat in disponibles)
                     {
-                        var tempMembres = new List<Personnage>(equipe.Membres);
+                        List<Personnage> tempMembres = new List<Personnage>(equipe.Membres);
                         tempMembres.Add(candidat);
 
                         double moyenne = tempMembres.Average(p => p.LvlPrincipal);
