@@ -42,18 +42,22 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 
             for (int i = 0; i <= personnages.Length - 4; i += 4)
             {
-                Equipe equipe = new Equipe();
+                if (d != 0)
+                {
+                    Equipe equipe = new Equipe();
 
-                equipe.AjouterMembre(tanks[t]);
-                equipe.AjouterMembre(dps[d]);
-                d -= 1; t += 1;
+                    equipe.AjouterMembre(tanks[t]);
+                    equipe.AjouterMembre(dps[d]);
+                    d -= 1; t += 1;
 
-                equipe.AjouterMembre(supports[s]);
-                equipe.AjouterMembre(dps[d]);
-                d -= 1; s += 1;
+                    equipe.AjouterMembre(supports[s]);
+                    equipe.AjouterMembre(dps[d]);
+                    d -= 1; s += 1;
 
 
-                repartition.AjouterEquipe(equipe);
+                    repartition.AjouterEquipe(equipe);
+                }
+                
             }
 
             return repartition;
