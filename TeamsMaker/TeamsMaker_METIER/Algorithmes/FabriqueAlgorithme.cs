@@ -32,25 +32,16 @@ namespace TeamsMaker_METIER.Algorithmes
             Algorithme res = null;
             switch(nomAlgorithme)
             {
-                case NomAlgorithme.NSWAP: res = new n_swap(); break;
-                case NomAlgorithme.n_opt: res = new n_opt(); break;
-                case NomAlgorithme.GLOUTON_CROISSANT: res = new AlgorithmesGloutonCroissant(); break;
                 case NomAlgorithme.LEVEL_BALANCING: res = new Level_balancing(); break;
-                case NomAlgorithme.ALGOROLEPRINCIPALE: res = new AlgoPb2(); break;
                 case NomAlgorithme.ExtremePrem: res = new AlgoExtremeEnPremier(); break; 
-                case NomAlgorithme.AlgoJulesPRBLÉME2: res = new algopb2gloutonjul(); break; 
-                case NomAlgorithme.AlgoPRogressif: res = new AlgorithmesProgressif(); break;
-
+                case NomAlgorithme.AlgoPRogressif: res = new AlgoExtremeEnPremier(); break;
+                case NomAlgorithme.n_opt: res = new n_opt(); break;
                 case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = new AlgoExtremeEnPremier_niv2(); break;
-                case NomAlgorithme.Algoextrremeniv3: res = new extremepremierniv3(); break;
-                    
-                case NomAlgorithme.algoniv3V1: res = new AlgoPb3V1(); break;
-                case NomAlgorithme.AlgoJulesPB3: res = new julesN_opt_pb3(); break;
-                case NomAlgorithme.n_opt_level_2: res = new n_opt_level_2(); break;
+                case NomAlgorithme.NSWAP: res = new NSwap(); break;
+                case NomAlgorithme.NSWAP_NIVEAU3: res = new NSwapNiveau3(); break;
             }
             return res;
         }
-       
         #endregion
     }
 }

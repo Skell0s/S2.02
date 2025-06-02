@@ -7,20 +7,25 @@ using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Personnages.Classes;
 using TeamsMaker_METIER.Problemes;
 
-namespace TeamsMaker_METIER.Algorithmes.Realisations
+namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
     public class n_opt_level_2 : Algorithme
     {
+        /// <summary>
+        /// Algorithme de répartition des personnages en équipes de 4, en équilibrant les rôles principaux et les niveaux des personnages.
+        /// </summary>
+        /// <param name="jeuTest"></param>
+        /// <returns></returns>
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
 
-            List<Personnage> tanks = new();
-            List<Personnage> supports = new();
-            List<Personnage> dps = new();
+            List<Personnage> tanks = new List<Personnage>();
+            List<Personnage> supports = new List<Personnage>();
+            List<Personnage> dps = new List<Personnage>();
 
-            foreach (var p in personnages)
+            foreach (Personnage p in personnages)
             {
                 switch (p.RolePrincipal)
                 {
@@ -79,16 +84,14 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                         meilleureDiff = diff;
                         meilleurIndice = i;
                     }
-
-                    // Petit bonus : early break si diff = 0
                     if (diff == 0) break;
                 }
 
                 if (meilleurIndice != -1)
                 {
                     var fusion = new Equipe();
-                    foreach (var p in equipeTD.Membres) fusion.AjouterMembre(p);
-                    foreach (var p in binomesSD[meilleurIndice].equipe.Membres) fusion.AjouterMembre(p);
+                    foreach (Personnage p in equipeTD.Membres) fusion.AjouterMembre(p);
+                    foreach (Personnage p in binomesSD[meilleurIndice].equipe.Membres) fusion.AjouterMembre(p);
 
                     if (fusion.EstValide(Probleme.SIMPLE))
                     {

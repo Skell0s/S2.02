@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\obj\Debug\net8.0-windows\
 TeamsMaker_IHM
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_IHM\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_IHM\App.xaml
 3-1469973196
 1-1606302853
 11214839484
-2002042098761
+200-1397048336
 Ecrans\Elements\VueEquipe.xaml;Ecrans\Realisations\EcranTestAlgo.xaml;Fenetres\FenetrePrincipale.xaml;
 
 False

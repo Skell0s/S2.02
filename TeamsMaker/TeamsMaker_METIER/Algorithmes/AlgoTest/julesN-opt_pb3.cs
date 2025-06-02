@@ -11,8 +11,9 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
-    internal class julesN_opt_pb3 : Algorithme
+    public class julesN_opt_pb3 : Algorithme
     {
+
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Personnage[] personnages = jeuTest.Personnages;
@@ -24,7 +25,7 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
             List<Personnage> sansRoleSecondaire = new List<Personnage>();
             List<Personnage> doublonroleSecondaire = new List<Personnage>();
 
-            foreach (var p in personnages)
+            foreach (Personnage p in personnages)
             {
                 if (p.RoleSecondaire == Role.TANK || p.RoleSecondaire == Role.SUPPORT || p.RoleSecondaire == Role.DPS)
                 {
@@ -32,14 +33,16 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
                     doublonroleSecondaire.Add(p);
                 }
                 else
+                {
                     sansRoleSecondaire.Add(p);
+                }
             }
 
             List<Personnage> tanks = new List<Personnage>();
             List<Personnage> supports = new List<Personnage>();
             List<Personnage> dps = new List<Personnage>();
 
-            foreach (var p in sansRoleSecondaire)
+            foreach (Personnage p in sansRoleSecondaire)
             {
                 switch (p.RolePrincipal)
                 {
@@ -48,7 +51,7 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
                     case Role.DPS: dps.Add(p); break;
                 }
             }
-            foreach (var p in avecRoleSecondaire)
+            foreach (Personnage p in avecRoleSecondaire)
             {
                 switch (p.RolePrincipal)
                 {
@@ -57,7 +60,7 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
                     case Role.DPS: dps.Add(p); break;
                 }
             }
-            foreach (var p in doublonroleSecondaire)
+            foreach (Personnage p in doublonroleSecondaire)
             {
                 switch (p.RoleSecondaire)
                 {
@@ -86,19 +89,19 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
             }
 
             //--------------------------------------------------étape 3 : comparer doublons avec version sans doublon
-            foreach (var equipe in repartition.Equipes)
+            foreach (Equipe equipe in repartition.Equipes)
             {
-                foreach (var membre in equipe.Membres)
+                foreach (Personnage membre in equipe.Membres)
                 {
                     if (doublonroleSecondaire.Contains(membre))
                     {
                         Equipe equipeOriginale = new Equipe();
-                        foreach (var m in equipe.Membres)
+                        foreach (Personnage m in equipe.Membres)
                             equipeOriginale.AjouterMembre(m);
 
                         // Recréer équipe sans doublon (le personnage en rôle secondaire n'est plus compté)
                         Equipe equipeSansDoublon = new Equipe();
-                        foreach (var m in equipe.Membres)
+                        foreach (Personnage m in equipe.Membres)
                             equipeSansDoublon.AjouterMembre(m); // même liste pour comparaison
 
                         double scoreOriginal = equipeOriginale.Score(Probleme.ROLESECONDAIRE);
@@ -116,7 +119,7 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
             List<Equipe> equipesValides = new List<Equipe>();
             List<Personnage> personnagesUtilises = new List<Personnage>();
 
-            foreach (var equipe in repartition.Equipes)
+            foreach (Equipe equipe in repartition.Equipes)
             {
                 if (equipe.EstValide(Probleme.ROLESECONDAIRE))
                 {
@@ -127,7 +130,7 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 
             // Récupère les personnages non utilisés
             List<Personnage> restants = new List<Personnage>();
-            foreach (var p in personnages)
+            foreach (Personnage p in personnages)
             {
                 if (!personnagesUtilises.Contains(p))
                     restants.Add(p);
@@ -152,82 +155,11 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 
             // On remplace les anciennes équipes par celles valides
             repartition = new Repartition(jeuTest);
-            foreach (var eq in equipesValides)
+            foreach (Equipe eq in equipesValides)
                 repartition.AjouterEquipe(eq);
 
             return repartition;
         }
     }
-}   
+}
 
-
-/*using System;
-using System.Collections.Generic;
-using System.Linq;
-using TeamsMaker_METIER.Algorithmes.Outils;
-using TeamsMaker_METIER.JeuxTest;
-using TeamsMaker_METIER.Personnages.Classes;
-using TeamsMaker_METIER.Personnages;
-using TeamsMaker_METIER.Problemes;
-
-namespace TeamsMaker_METIER.Algorithmes.AlgoTest
-{
-    internal class julesN_opt_pb3 : Algorithme
-    {
-        public override Repartition Repartir(JeuTest jeuTest)
-        {
-            Personnage[] personnages = jeuTest.Personnages;
-            Repartition repartition = new Repartition(jeuTest);
-
-            // Étape 1 : Générer toutes les combinaisons possibles de 4 personnages distincts
-            var toutesCombinaisons = GetCombinations(personnages.ToList(), 4);
-
-            HashSet<Personnage> personnagesUtilises = new HashSet<Personnage>();
-
-            foreach (var combinaison in toutesCombinaisons)
-            {
-                // Vérifier si un personnage est déjà utilisé
-                if (combinaison.Any(p => personnagesUtilises.Contains(p)))
-                    continue;
-
-                // Créer l'équipe et vérifier sa validité (en testant rôles secondaires)
-                Equipe equipe = new Equipe();
-                foreach (var p in combinaison)
-                    equipe.AjouterMembre(p);
-
-                if (equipe.EstValide(Probleme.ROLESECONDAIRE))
-                {
-                    repartition.AjouterEquipe(equipe);
-                    foreach (var p in combinaison)
-                        personnagesUtilises.Add(p); // Marquer comme utilisé
-                }
-            }
-
-            return repartition;
-        }
-
-        // Génère toutes les combinaisons de 4 personnages parmi la liste
-        private List<List<Personnage>> GetCombinations(List<Personnage> source, int taille)
-        {
-            var result = new List<List<Personnage>>();
-            Combiner(source, new List<Personnage>(), 0, taille, result);
-            return result;
-        }
-
-        private void Combiner(List<Personnage> source, List<Personnage> current, int index, int taille, List<List<Personnage>> result)
-        {
-            if (current.Count == taille)
-            {
-                result.Add(new List<Personnage>(current));
-                return;
-            }
-
-            for (int i = index; i < source.Count; i++)
-            {
-                current.Add(source[i]);
-                Combiner(source, current, i + 1, taille, result);
-                current.RemoveAt(current.Count - 1);
-            }
-        }
-    }
-}*/
