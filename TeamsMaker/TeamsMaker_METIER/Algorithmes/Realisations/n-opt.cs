@@ -15,12 +15,15 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             Repartition repartition2 = new Repartition(jeuTest);
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
+            Repartition repartition = new Repartition(jeuTest);
 
+            List<Personnage> tanks = new List<Personnage>();
+            List<Personnage> supports = new List<Personnage>();
+            List<Personnage> dps = new List<Personnage>();
             int a = 0;
             int z = personnages.Length - 1;
 
-            // Création d'équipes de 2 : du plus faible au plus fort
-            while (a < z)
+            foreach (var p in personnages)
             {
                 Equipe equipeDe2 = new Equipe();
                 equipeDe2.AjouterMembre(personnages[a]);
@@ -46,9 +49,9 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 int meilleurIndex = -1;
                 double meilleureDiff = double.MaxValue;
 
-                for (int j = i + 1; j < nbEquipes; j++)
-                {
-                    if (equipesUtilisees.Contains(j)) continue;
+                equipeDe4.AjouterMembre(supports[s]);
+                equipeDe4.AjouterMembre(dps[d]);
+                //repartition.AjouterEquipe(equipeDe2);
 
                     var fusion = tableauequipe2[i].Membres.Concat(tableauequipe2[j].Membres).ToList();
 
@@ -64,6 +67,9 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     }
                 }
 
+
+
+            }
                 if (meilleurIndex != -1)
                 {
                     var equipeFusion = new Equipe();
