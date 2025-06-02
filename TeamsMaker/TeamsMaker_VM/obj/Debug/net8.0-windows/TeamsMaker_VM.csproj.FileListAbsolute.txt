@@ -103,3 +103,25 @@ C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\J
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Jeutest3.jt
 =======
 >>>>>>> main
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest 2.jt
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\jeutest.jt
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\JeuTest1000.jt
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Jeutest3.jt
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\JeuxTest\Fichiers\Test.jt
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\TeamsMaker_VM.deps.json
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\TeamsMaker_VM.dll
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\TeamsMaker_VM.pdb
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\TeamsMaker_METIER.dll
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\bin\Debug\net8.0-windows\TeamsMaker_METIER.pdb
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.csproj.AssemblyReference.cache
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.g.resources
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.AssemblyInfoInputs.cache
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.AssemblyInfo.cs
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.csproj.CoreCompileInputs.cache
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.sourcelink.json
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMak.E14A5AD3.Up2Date
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.dll
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\refint\TeamsMaker_VM.dll
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\TeamsMaker_VM.pdb
+C:\Users\lixy2\OneDrive\Documents\GitHub\S2.02\TeamsMaker\TeamsMaker_VM\obj\Debug\net8.0-windows\ref\TeamsMaker_VM.dll

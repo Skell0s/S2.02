@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
+      "projectUniqueName": "C:\\Users\\lixy2\\OneDrive\\Documents\\GitHub\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
       "projectName": "TeamsMaker_VM",
-      "projectPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
+      "projectPath": "C:\\Users\\lixy2\\OneDrive\\Documents\\GitHub\\S2.02\\TeamsMaker\\TeamsMaker_VM\\TeamsMaker_VM.csproj",
       "packagesPath": "C:\\Users\\lixy2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_VM\\obj\\",
+      "outputPath": "C:\\Users\\lixy2\\OneDrive\\Documents\\GitHub\\S2.02\\TeamsMaker\\TeamsMaker_VM\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
-              "projectPath": "C:\\Users\\lixy2\\Documents\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj"
+            "C:\\Users\\lixy2\\OneDrive\\Documents\\GitHub\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj": {
+              "projectPath": "C:\\Users\\lixy2\\OneDrive\\Documents\\GitHub\\S2.02\\TeamsMaker\\TeamsMaker_METIER\\TeamsMaker_METIER.csproj"
             }
           }
         }
@@ -98,7 +98,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
