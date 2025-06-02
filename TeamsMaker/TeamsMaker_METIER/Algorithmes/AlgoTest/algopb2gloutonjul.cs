@@ -9,7 +9,7 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.AlgoTest
 {
-    internal class algopb2jul : Algorithme
+    internal class algopb2gloutonjul : Algorithme
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
