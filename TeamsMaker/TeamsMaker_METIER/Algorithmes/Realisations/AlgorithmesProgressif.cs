@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,16 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    public class AlgorithmeExtremeEnPremier : Algorithme
+    public class AlgoProgressif : Algorithme
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             Repartition AlgoPro = AlgorithmeProgressif(jeuTest);
             AlgoPro = SupprimerEquipeScoreEleve(AlgoPro, jeuTest);
+            stopwatch.Stop();
+            TempsExecution = stopwatch.ElapsedMilliseconds;
             return AlgoPro;
         }
 

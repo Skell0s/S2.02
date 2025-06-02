@@ -12,7 +12,7 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    internal class n_opt_niv_2 : Algorithme
+    public class n_opt_niv_2 : Algorithme
     {
         /* private List<Personnage> equipede2 = new List<Personnage>();
          private List<Equipe> equipes2;

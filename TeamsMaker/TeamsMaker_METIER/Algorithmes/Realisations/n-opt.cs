@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
@@ -12,6 +13,8 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
     {
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             Repartition repartition2 = new Repartition(jeuTest);
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
@@ -81,7 +84,8 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 }
             }
 
-
+            stopwatch.Stop();
+            TempsExecution = stopwatch.ElapsedMilliseconds;
 
             return repartitionFinale;
         }

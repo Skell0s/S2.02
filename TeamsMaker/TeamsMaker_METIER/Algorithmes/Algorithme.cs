@@ -39,7 +39,7 @@ namespace TeamsMaker_METIER.Algorithmes
             Repartition repartition = new Repartition(jeuTest);
             foreach (Equipe equipe in r.Equipes)
             {
-                if (equipe.Score(Probleme.SIMPLE) < 400)
+                if (equipe.Score(Probleme.SIMPLE) < 600)
                 {
                     repartition.AjouterEquipe(equipe);
                 }
