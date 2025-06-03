@@ -41,7 +41,6 @@ namespace TeamsMaker_METIER.Algorithmes
                 case NomAlgorithme.n_opt: res = "Algorithme n-opt"; break;
                 case NomAlgorithme.NSWAP: res = "Algorithme n-swap"; break;
                 case NomAlgorithme.NSWAP_NIVEAU3: res = "Algorithme n-swap niveau 3"; break;
-
             }
             
 

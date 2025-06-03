@@ -30,15 +30,16 @@ namespace TeamsMaker_METIER.Algorithmes
         public Algorithme? Creer(NomAlgorithme nomAlgorithme)
         {
             Algorithme res = null;
-            switch(nomAlgorithme)
+            switch (nomAlgorithme)
             {
                 case NomAlgorithme.LEVEL_BALANCING: res = new Level_balancing(); break;
-                case NomAlgorithme.ExtremePrem: res = new AlgoExtremeEnPremier(); break; 
+                case NomAlgorithme.ExtremePrem: res = new AlgoExtremeEnPremier(); break;
                 case NomAlgorithme.AlgoPRogressif: res = new AlgoExtremeEnPremier(); break;
                 case NomAlgorithme.n_opt: res = new n_opt(); break;
                 case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = new AlgoExtremeEnPremier_niv2(); break;
                 case NomAlgorithme.NSWAP: res = new NSwap(); break;
                 case NomAlgorithme.NSWAP_NIVEAU3: res = new NSwapNiveau3(); break;
+
             }
             return res;
         }
