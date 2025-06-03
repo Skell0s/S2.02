@@ -142,7 +142,7 @@ namespace TeamsMaker_IHM.Ecrans.Realisations {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TeamsMaker_IHM;component/ecrans/realisations/ecrantestalgo.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TeamsMaker_IHM;V1.0.0.0;component/ecrans/realisations/ecrantestalgo.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Ecrans\Realisations\EcranTestAlgo.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

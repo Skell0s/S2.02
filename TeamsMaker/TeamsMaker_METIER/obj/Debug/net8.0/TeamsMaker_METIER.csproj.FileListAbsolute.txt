@@ -57,20 +57,3 @@ C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\Jeu
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\jeutest 2.jt
 C:\Users\pro\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\Jeutest3.jt
 C:\Users\lixy2\Documents\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\JeuTest1000.jt
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\jeutest 2.jt
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\jeutest.jt
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\JeuTest1000.jt
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\Jeutest3.jt
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\JeuxTest\Fichiers\Test.jt
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\TeamsMaker_METIER.deps.json
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\TeamsMaker_METIER.dll
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\bin\Debug\net8.0\TeamsMaker_METIER.pdb
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.AssemblyInfoInputs.cache
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.AssemblyInfo.cs
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.csproj.CoreCompileInputs.cache
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.sourcelink.json
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.dll
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\refint\TeamsMaker_METIER.dll
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\TeamsMaker_METIER.pdb
-C:\Users\Jean-CharlesJOREL\dev\IUT\S2.02\TeamsMaker\TeamsMaker_METIER\obj\Debug\net8.0\ref\TeamsMaker_METIER.dll
