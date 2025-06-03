@@ -10,20 +10,17 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
     public class n_opt : Algorithme
     {
-        public override Repartition Repartir(JeuTest jeuTest)
+            public override Repartition Repartir(JeuTest jeuTest)
         {
             Repartition repartition2 = new Repartition(jeuTest);
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
-            Repartition repartition = new Repartition(jeuTest);
 
-            List<Personnage> tanks = new List<Personnage>();
-            List<Personnage> supports = new List<Personnage>();
-            List<Personnage> dps = new List<Personnage>();
             int a = 0;
             int z = personnages.Length - 1;
 
-            foreach (var p in personnages)
+            // Création d'équipes de 2 : du plus faible au plus fort
+            while (a < z)
             {
                 Equipe equipeDe2 = new Equipe();
                 equipeDe2.AjouterMembre(personnages[a]);
@@ -49,9 +46,9 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 int meilleurIndex = -1;
                 double meilleureDiff = double.MaxValue;
 
-                equipeDe4.AjouterMembre(supports[s]);
-                equipeDe4.AjouterMembre(dps[d]);
-                //repartition.AjouterEquipe(equipeDe2);
+                for (int j = i + 1; j < nbEquipes; j++)
+                {
+                    if (equipesUtilisees.Contains(j)) continue;
 
                     var fusion = tableauequipe2[i].Membres.Concat(tableauequipe2[j].Membres).ToList();
 
@@ -67,9 +64,6 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     }
                 }
 
-
-
-            }
                 if (meilleurIndex != -1)
                 {
                     var equipeFusion = new Equipe();
@@ -91,5 +85,5 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             return repartitionFinale;
         }
+        }
     }
-}
