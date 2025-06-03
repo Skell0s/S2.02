@@ -2,29 +2,33 @@
 using TeamsMaker_METIER.Personnages;
 using TeamsMaker_METIER.Problemes;
 
-namespace TeamsMaker_METIER.Algorithmes.AlgoTest
+namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    internal class Level_balancing : Algorithme
+    public class Level_balancing : Algorithme
     {
+        /// <summary>
+        /// Algorithme de répartition des personnages en équipes de 4, en équilibrant les niveaux des personnages.
+        /// </summary>
+        /// <param name="jeuTest"></param>
+        /// <returns></returns>
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Personnage[] personnages = jeuTest.Personnages;
             Dictionary<Personnage, int> balances = personnages
+            .ToDictionary(p => p, p => p.LvlPrincipal - 50);            
 
-            .ToDictionary(p => p, p => p.LvlPrincipal - 50);            // transformation d'une liste en dictonnaire qu'on diminue par 50
-
-            var sorted = balances.OrderBy(kv => kv.Value).ToList();             // On trie les personnages par balance
+            List<KeyValuePair<Personnage, int>> sorted = balances.OrderBy(kv => kv.Value).ToList();             
 
             List<List<Personnage>> paires = new List<List<Personnage>>();
             HashSet<Personnage> utilises = new HashSet<Personnage>();
 
             // Étape 1 : former les meilleures paires possibles
-            for (int i = 0; i < sorted.Count; i++)                 //parcour la liste jusqu'a qu'il n'y a plus de personne 
+            for (int i = 0; i < sorted.Count; i++)                  
             {
-                if (utilises.Contains(sorted[i].Key)) continue;   //on regarde si la personne esf déja utilsé
+                if (utilises.Contains(sorted[i].Key)) continue;   
 
-                Personnage p1 = sorted[i].Key; //p1 prend le nom du personnage
-                int b1 = sorted[i].Value;      //b1 prend la valeur du personnage
+                Personnage p1 = sorted[i].Key; 
+                int b1 = sorted[i].Value;      
 
                 int meilleurEcart = int.MaxValue;
                 Personnage meilleurP2 = null;
@@ -35,7 +39,7 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
                     if (utilises.Contains(p2)) continue;
 
                     int b2 = sorted[j].Value;
-                    int ecart = Math.Abs(b1 + b2); // plus proche de 0
+                    int ecart = Math.Abs(b1 + b2); 
 
                     if (ecart < meilleurEcart)
                     {
@@ -101,9 +105,9 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
             // Étape 3 : créer la répartition
             Repartition repartition = new Repartition(jeuTest);
             
-            foreach (var equipe in equipes)               // parcours les équipes
+            foreach (var equipe in equipes)              
             {
-                if (equipe.Score(Probleme.SIMPLE) <= 400) //si l'équipe est suppéreur a 400 alors ne pas crée l'équipe
+                if (equipe.Score(Probleme.SIMPLE) <= 400)
                 {
                     repartition.AjouterEquipe(equipe);
                 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,15 +10,24 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    public class n_swap : Algorithme
+    public class NSwap : Algorithme
     {
+        /// <summary>
+        /// Algorithme de répartition des personnages en équipes de 4, en utilisant la méthode N-Swap pour optimiser les équipes.
+        /// </summary>
+        /// <param name="jeuTest"></param>
+        /// <returns></returns>
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             AlgoExtremeEnPremier algoInitial = new AlgoExtremeEnPremier();
             Repartition repartition = algoInitial.Repartir(jeuTest);
 
             repartition = AppliquerNSwap(repartition, jeuTest);
             repartition = SupprimerEquipeScoreEleve(repartition, jeuTest);
+            stopwatch.Stop();
+            TempsExecution = stopwatch.ElapsedMilliseconds;
 
             return repartition;
         }
@@ -57,7 +67,14 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             }
             return swapRepartition;
         }
-
+        /// <summary>
+        /// Crée un tableau d'équipes après un échange entre deux personnages de deux équipes différentes.
+        /// </summary>
+        /// <param name="e1"></param>
+        /// <param name="p1"></param>
+        /// <param name="e2"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
         private Equipe[] EquipesEchange(Equipe e1, Personnage p1, Equipe e2, Personnage p2)
         {
             Equipe equipe1 = new Equipe();
@@ -84,7 +101,14 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             equipes.Add(equipe2);
             return equipes.ToArray();
         }
-
+        /// <summary>
+        /// Vérifie si l'échange entre deux personnages de deux équipes est valide, c'est-à-dire si les équipes résultantes sont valides selon le problème SIMPLE.
+        /// </summary>
+        /// <param name="e1"></param>
+        /// <param name="p1"></param>
+        /// <param name="e2"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
         private bool EstEchangeValide(Equipe e1, Personnage p1, Equipe e2, Personnage p2)
         {
             bool result = true;
@@ -96,7 +120,14 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             return result;
         }
-
+        /// <summary>
+        /// Calcule le score après un échange entre deux personnages de deux équipes différentes, en additionnant les scores des équipes résultantes.
+        /// </summary>
+        /// <param name="e1"></param>
+        /// <param name="p1"></param>
+        /// <param name="e2"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
         private double ScoreApresEchange(Equipe e1, Personnage p1, Equipe e2, Personnage p2)
         {
             double result = 0;
@@ -109,11 +140,27 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             return result;
         }
 
+        /// <summary>
+        /// Calcule le score actuel de deux équipes, en additionnant leurs scores respectifs pour le problème SIMPLE.
+        /// </summary>
+        /// <param name="e1"></param>
+        /// <param name="e2"></param>
+        /// <returns></returns>
         private double ScoreActuel(Equipe e1, Equipe e2)
         {
             return e1.Score(Probleme.SIMPLE) + e2.Score(Probleme.SIMPLE);
         }
 
+        /// <summary>
+        /// Effectue un échange entre deux personnages de deux équipes différentes, créant une nouvelle répartition des équipes.
+        /// </summary>
+        /// <param name="r"></param>
+        /// <param name="jeuTest"></param>
+        /// <param name="e1"></param>
+        /// <param name="p1"></param>
+        /// <param name="e2"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
         private Repartition EffectuerEchange(Repartition r, JeuTest jeuTest, Equipe e1, Personnage p1, Equipe e2, Personnage p2)
         {
             Repartition repartition = new Repartition(jeuTest);
