@@ -19,7 +19,7 @@ namespace TeamsMaker_VM.Ressources
         private Dictionary<string, string> adresses;
 
         // Instance du Singleton
-        private static ImageManager instance;
+        private static ImageManager? instance;
         #endregion
 
         #region --- Propriétés ---

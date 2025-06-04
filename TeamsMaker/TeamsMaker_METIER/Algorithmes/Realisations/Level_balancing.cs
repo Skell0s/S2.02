@@ -31,7 +31,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 int b1 = sorted[i].Value;      
 
                 int meilleurEcart = int.MaxValue;
-                Personnage meilleurP2 = null;
+                Personnage? meilleurP2 = null;
 
                 for (int j = i + 1; j < sorted.Count; j++)
                 {
