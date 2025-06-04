@@ -21,13 +21,13 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Personnage[] personnages = jeuTest.Personnages;
-            Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
             Repartition repartition = new Repartition(jeuTest);
 
             List<Personnage> tanks = new List<Personnage>();
             List<Personnage> supports = new List<Personnage>();
             List<Personnage> dps = new List<Personnage>();
 
+            //étape 1 : création des listes de personnages par rôle et tri croissant par niveau principal
             foreach (Personnage p in personnages)
             {
                 switch (p.RolePrincipal)
@@ -46,6 +46,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             int t = 0;
             int s = 0;
 
+            // étape 2 : création des équipes en utilisant la méthode "Extrêmes en premier" avec les rôles principaux
             while (t < tanks.Count && s < supports.Count && d - 1 >= 0)
             {
                 if (d != 0)
@@ -65,7 +66,6 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 }
                 
             }
-
 
             return repartition;
         }
