@@ -39,7 +39,6 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                 if (dejaUtilises.Contains(p1)) 
                 { 
 
-
                 int plusPetitEcart = int.MaxValue;
                 Personnage? meilleurP2 = null;
 
