@@ -12,14 +12,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
         /// <param name="jeuTest"></param>
         /// <returns></returns>
 
-
         public override Repartition Repartir(JeuTest jeuTest)
         {
             // Étape 1 : Calculer l'écart de niveau de chaque personnage par rapport à 50
             Personnage[] personnages = jeuTest.Personnages;
-
             Dictionary<Personnage, int> niveauParPersonnage = new Dictionary<Personnage, int>();
-            foreach (Personnage perso in personnages)
+            foreach (var perso in personnages)
             {
                 niveauParPersonnage[perso] = perso.LvlPrincipal - 50;
             }
@@ -34,35 +32,42 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             List<List<Personnage>> paires = new List<List<Personnage>>();
             HashSet<Personnage> dejaUtilises = new HashSet<Personnage>();
 
-            foreach (Personnage p1 in tries)
+            foreach (var p1 in tries)
             {
-                if (dejaUtilises.Contains(p1)) 
-                { 
+                if (dejaUtilises.Contains(p1))
+                {
+                    // On passe au suivant
+                }
+                else
+                {
+                    Personnage meilleurP2 = null;
+                    int plusPetitEcart = int.MaxValue;
 
-                int plusPetitEcart = int.MaxValue;
-                Personnage? meilleurP2 = null;
-
-
-                    foreach (Personnage p2 in tries)
+                    foreach (var p2 in tries)
                     {
-                        if (p1 == p2 || dejaUtilises.Contains(p2)) { 
-
-                        int ecartTotal = Math.Abs(niveauParPersonnage[p1] + niveauParPersonnage[p2]);
-
-                        if (ecartTotal < plusPetitEcart)
+                        if (p1 == p2 || dejaUtilises.Contains(p2))
                         {
-                            plusPetitEcart = ecartTotal;
-                            meilleurP2 = p2;
+                            // On ignore ce personnage
+                        }
+                        else
+                        {
+                            int ecartTotal = Math.Abs(niveauParPersonnage[p1] + niveauParPersonnage[p2]);
+
+                            if (ecartTotal < plusPetitEcart)
+                            {
+                                plusPetitEcart = ecartTotal;
+                                meilleurP2 = p2;
+                            }
                         }
                     }
-                }
 
-                if (meilleurP2 != null)
-                {
-                    paires.Add(new List<Personnage> { p1, meilleurP2 });
-                    dejaUtilises.Add(p1);
-                    dejaUtilises.Add(meilleurP2);
-                } }
+                    if (meilleurP2 != null)
+                    {
+                        paires.Add(new List<Personnage> { p1, meilleurP2 });
+                        dejaUtilises.Add(p1);
+                        dejaUtilises.Add(meilleurP2);
+                    }
+                }
             }
 
             // Étape 4 : Regrouper les paires en équipes de 4 personnages
@@ -71,47 +76,62 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             for (int i = 0; i < paires.Count; i++)
             {
-                if (indicesUtilises.Contains(i)) continue;
-
-                List<Personnage> paire1 = paires[i];
-                int meilleurIndice = -1;
-                int plusPetitEcart = int.MaxValue;
-
-                for (int j = i + 1; j < paires.Count; j++)
+                if (indicesUtilises.Contains(i))
                 {
-                    if (indicesUtilises.Contains(j)) continue;
-
-                    List<Personnage> paire2 = paires[j];
-                    int balance = paire1.Concat(paire2).Sum(p => niveauParPersonnage[p]);
-                    int ecart = Math.Abs(balance);
-
-                    if (ecart < plusPetitEcart)
-                    {
-                        plusPetitEcart = ecart;
-                        meilleurIndice = j;
-                    }
+                    // Déjà utilisée
                 }
-
-                if (meilleurIndice != -1)
+                else
                 {
-                    Equipe equipe = new Equipe();
-                    foreach (Personnage p in paire1.Concat(paires[meilleurIndice]))
-                        equipe.AjouterMembre(p);
+                    List<Personnage> paire1 = paires[i];
+                    int meilleurIndice = -1;
+                    int plusPetitEcart = int.MaxValue;
 
-                    equipes.Add(equipe);
-                    indicesUtilises.Add(i);
-                    indicesUtilises.Add(meilleurIndice);
+                    for (int j = i + 1; j < paires.Count; j++)
+                    {
+                        if (indicesUtilises.Contains(j))
+                        {
+                            // Déjà utilisée
+                        }
+                        else
+                        {
+                            List<Personnage> paire2 = paires[j];
+                            int balance = paire1.Concat(paire2).Sum(p => niveauParPersonnage[p]);
+                            int ecart = Math.Abs(balance);
+
+                            if (ecart < plusPetitEcart)
+                            {
+                                plusPetitEcart = ecart;
+                                meilleurIndice = j;
+                            }
+                        }
+                    }
+
+                    if (meilleurIndice != -1)
+                    {
+                        Equipe equipe = new Equipe();
+                        foreach (var p in paire1.Concat(paires[meilleurIndice]))
+                        {
+                            equipe.AjouterMembre(p);
+                        }
+
+                        equipes.Add(equipe);
+                        indicesUtilises.Add(i);
+                        indicesUtilises.Add(meilleurIndice);
+                    }
                 }
             }
 
             // Étape 5 : Créer la répartition finale avec les équipes valides
             Repartition repartition = new Repartition(jeuTest);
-            foreach (Equipe equipe in equipes)
+            foreach (var equipe in equipes)
+            {
                 if (equipe.Score(Probleme.SIMPLE) <= 400)
+                {
                     repartition.AjouterEquipe(equipe);
+                }
+            }
 
             return repartition;
         }
     }
 }
-
