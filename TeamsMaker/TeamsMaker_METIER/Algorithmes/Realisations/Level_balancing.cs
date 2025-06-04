@@ -17,9 +17,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
         {
             // Étape 1 : Calculer l'écart de niveau de chaque personnage par rapport à 50
             Personnage[] personnages = jeuTest.Personnages;
+
             Dictionary<Personnage, int> niveauParPersonnage = new Dictionary<Personnage, int>();
             foreach (Personnage perso in personnages)
+            {
                 niveauParPersonnage[perso] = perso.LvlPrincipal - 50;
+            }
 
             // Étape 2 : Trier les personnages par leur écart
             List<Personnage> tries = niveauParPersonnage
@@ -33,21 +36,25 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
             foreach (Personnage p1 in tries)
             {
-                if (dejaUtilises.Contains(p1)) continue;
+                if (dejaUtilises.Contains(p1)) 
+                { 
+
 
                 int plusPetitEcart = int.MaxValue;
                 Personnage? meilleurP2 = null;
 
-                foreach (Personnage p2 in tries)
-                {
-                    if (p1 == p2 || dejaUtilises.Contains(p2)) continue;
 
-                    int ecartTotal = Math.Abs(niveauParPersonnage[p1] + niveauParPersonnage[p2]);
-
-                    if (ecartTotal < plusPetitEcart)
+                    foreach (Personnage p2 in tries)
                     {
-                        plusPetitEcart = ecartTotal;
-                        meilleurP2 = p2;
+                        if (p1 == p2 || dejaUtilises.Contains(p2)) { 
+
+                        int ecartTotal = Math.Abs(niveauParPersonnage[p1] + niveauParPersonnage[p2]);
+
+                        if (ecartTotal < plusPetitEcart)
+                        {
+                            plusPetitEcart = ecartTotal;
+                            meilleurP2 = p2;
+                        }
                     }
                 }
 
@@ -56,7 +63,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     paires.Add(new List<Personnage> { p1, meilleurP2 });
                     dejaUtilises.Add(p1);
                     dejaUtilises.Add(meilleurP2);
-                }
+                } }
             }
 
             // Étape 4 : Regrouper les paires en équipes de 4 personnages
