@@ -9,7 +9,7 @@ namespace TeamsMaker_METIER.Algorithmes.Outils
 {
     class ComparateurPersonnageParNiveauPrincipal : Comparer<Personnage>
     {
-        public override int Compare(Personnage? x, Personnage? y)
+        public override int Compare(Personnage x, Personnage y)
         {
             return x.LvlPrincipal - y.LvlPrincipal;
         }

@@ -50,8 +50,8 @@ namespace TeamsMaker_IHM.Ecrans.Elements
         {
             switch(this.vueModele.EstValide)
             {
-                case true: this.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#ADEBAD"); break;
-                case false: this.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FFB2B2"); break;
+                case true: this.Background = (SolidColorBrush?)new BrushConverter().ConvertFromString("#ADEBAD"); break;
+                case false: this.Background = (SolidColorBrush?)new BrushConverter().ConvertFromString("#FFB2B2"); break;
             }
             if (this.vueModele.Score > -1) this.Score.Text = this.vueModele.Score.ToString("F1");
             else this.Score.Text = "--";

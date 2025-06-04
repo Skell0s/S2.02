@@ -41,7 +41,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
                 while (equipe.Membres.Length < 4)
                 {
-                    Personnage meilleurCandidat = null;
+                    Personnage? meilleurCandidat = null;
                     double meilleurEcart = double.MaxValue;
 
                     foreach (Personnage candidat in disponibles)
