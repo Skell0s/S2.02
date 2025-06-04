@@ -39,7 +39,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             }
 
             // Garder le personnage restant s'il y a un nombre impair
-            Personnage personnageRestant = (a == z) ? personnages[a] : null;
+            Personnage? personnageRestant = (a == z) ? personnages[a] : null;
 
             Equipe[] tableauequipe2 = repartition2.Equipes;
             int nbEquipes = tableauequipe2.Length;

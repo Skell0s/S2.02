@@ -27,7 +27,7 @@ namespace TeamsMaker_VM.VueModeles
         {
             get
             {
-                ImageSource image = null;
+                ImageSource? image = null;
                 switch (this.personnage.Classe)
                 {
                     case Classe.ARCHER: image = ImageManager.GetImage("PERSO_ARCHER"); break;

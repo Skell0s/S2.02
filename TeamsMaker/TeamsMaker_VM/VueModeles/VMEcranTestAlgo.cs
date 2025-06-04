@@ -137,7 +137,7 @@ namespace TeamsMaker_VM.VueModeles
             
             var jtFiles = Directory.GetFiles(repertoire, "*.jt").Select(Path.GetFileName);
 
-            foreach (string jtFile in jtFiles) ListNomFichiersJeuTest.Add(jtFile);
+            foreach (string? jtFile in jtFiles) ListNomFichiersJeuTest.Add(jtFile);
         }
 
         /// <summary>
