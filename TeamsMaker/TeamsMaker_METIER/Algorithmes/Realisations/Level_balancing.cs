@@ -35,8 +35,8 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             {
                 if (dejaUtilises.Contains(p1)) continue;
 
-                Personnage meilleurP2 = null;
-                int plusPetitEcart = int.MaxValue;
+                int meilleurEcart = int.MaxValue;
+                Personnage? meilleurP2 = null;
 
                 foreach (Personnage p2 in tries)
                 {

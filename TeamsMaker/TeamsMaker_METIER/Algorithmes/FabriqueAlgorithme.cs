@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TeamsMaker_METIER.Algorithmes.AlgoTest;
 using TeamsMaker_METIER.Algorithmes.Realisations;
 using TeamsMaker_METIER.Problemes;
 
@@ -29,7 +28,7 @@ namespace TeamsMaker_METIER.Algorithmes
         /// <returns></returns>
         public Algorithme? Creer(NomAlgorithme nomAlgorithme)
         {
-            Algorithme res = null;
+            Algorithme? res = null;
             switch(nomAlgorithme)
             {
                 case NomAlgorithme.LEVEL_BALANCING: res = new Level_balancing(); break;
