@@ -20,9 +20,13 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             Personnage[] personnages = jeuTest.Personnages;
+
+            //étape 1 : Tri des personnages par niveau principal
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
+            
             Repartition repartition = new Repartition(jeuTest);
 
+            //étape 2 : Création des équipes de 4 personnages
             int a = 0;
             int z = personnages.Length - 1;
 
@@ -36,6 +40,8 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
                 repartition.AjouterEquipe(equipe);
             }
+
+            //étape 3 : Gestion des personnages si le jeu de test est impaire
             if (z - a + 1 > 0)
             {
                 Equipe equipeRestante = new Equipe();
