@@ -27,7 +27,7 @@ namespace TeamsMaker_METIER.JeuxTest.Parseurs
             string cheminFichier = Path.Combine(Directory.GetCurrentDirectory(), "JeuxTest/Fichiers/" + nomFichier); 
             using (StreamReader stream = new StreamReader(cheminFichier))
             {
-                string ligne; while ((ligne = stream.ReadLine()) != null)
+                string? ligne; while ((ligne = stream.ReadLine()) != null)
                 {
                     jeuTest.AjouterPersonnage(this.ParserLigne(ligne)); //On parse la ligne
                 } 

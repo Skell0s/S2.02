@@ -12,17 +12,13 @@ namespace TeamsMaker_METIER.Algorithmes
     /// </summary>
     public enum NomAlgorithme
     {
-        ALGOTEST,
-        GLOUTON_CROISSANT,
         LEVEL_BALANCING,
-        ALGOROLEPRINCIPALE,
         ExtremePrem,
-        AlgoJulesPRBLÉME2,
         AlgoPRogressif,
         n_opt,
         AlgoExtremeEnPremier_niv2,
         NSWAP,
-        NSWAP_NIVEAU3
+        NSWAP_NIVEAU3,
     }
 
 
@@ -38,17 +34,14 @@ namespace TeamsMaker_METIER.Algorithmes
             string res = "Algorithme non nommé :(";
             switch(algo)
             {
-                case NomAlgorithme.ALGOTEST: res = "Algorithme de test (à supprimer)----TEST----"; break;
-                case NomAlgorithme.GLOUTON_CROISSANT: res = "Glouton croissant----TEST----"; break;
-                case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing----TEST----"; break;
-                case NomAlgorithme.ALGOROLEPRINCIPALE: res = "Algorithme de répartition par rôle principal----TEST----"; break;
+                case NomAlgorithme.LEVEL_BALANCING: res = "Level  balancing "; break;
                 case NomAlgorithme.ExtremePrem: res = "Extremes en premier"; break;
-                case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = "Extremes en premier level 2"; break;
-                case NomAlgorithme.AlgoJulesPRBLÉME2: res = "ProblèmeJules----TEST----"; break;
+                case NomAlgorithme.AlgoExtremeEnPremier_niv2: res = "Extremes en premier niveau 2"; break;
                 case NomAlgorithme.AlgoPRogressif: res = "Algorithme progressif"; break;
                 case NomAlgorithme.n_opt: res = "Algorithme n-opt"; break;
                 case NomAlgorithme.NSWAP: res = "Algorithme n-swap"; break;
                 case NomAlgorithme.NSWAP_NIVEAU3: res = "Algorithme n-swap niveau 3"; break;
+
             }
             
 

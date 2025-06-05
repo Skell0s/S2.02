@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using TeamsMaker_METIER.Algorithmes.Outils;
 using TeamsMaker_METIER.JeuxTest;
@@ -10,8 +11,15 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
     public class n_opt : Algorithme
     {
+        /// <summary>
+        /// Algorithme de répartition des personnages en équipes de 4, en comparant les niveaux principaux sans prendre en compte les roles
+        /// </summary>
+        /// <param name="jeuTest"></param>
+        /// <returns></returns>
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             Repartition repartition2 = new Repartition(jeuTest);
             Personnage[] personnages = jeuTest.Personnages;
             Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
@@ -31,7 +39,7 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
             }
 
             // Garder le personnage restant s'il y a un nombre impair
-            Personnage personnageRestant = (a == z) ? personnages[a] : null;
+            Personnage? personnageRestant = (a == z) ? personnages[a] : null;
 
             Equipe[] tableauequipe2 = repartition2.Equipes;
             int nbEquipes = tableauequipe2.Length;
@@ -51,9 +59,9 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     if (equipesUtilisees.Contains(j)) continue;
 
                     var fusion = tableauequipe2[i].Membres.Concat(tableauequipe2[j].Membres).ToList();
-                    if (fusion.Count != 4) continue;
 
-                    double diff = Math.Abs(200 - fusion.Sum(p => p.LvlPrincipal));
+                    if (fusion.Count != 4) continue;
+                        double diff = Math.Abs((50 - fusion.Sum(p => p.LvlPrincipal)) * (50 - fusion.Sum(p => p.LvlPrincipal)));
                     if (diff < meilleureDiff)
                     {
                         meilleureDiff = diff;
@@ -63,10 +71,10 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
                 if (meilleurIndex != -1)
                 {
-                    var equipeFusion = new Equipe();
-                    foreach (var membre in tableauequipe2[i].Membres)
+                    Equipe equipeFusion = new Equipe();
+                    foreach (Personnage membre in tableauequipe2[i].Membres)
                         equipeFusion.AjouterMembre(membre);
-                    foreach (var membre in tableauequipe2[meilleurIndex].Membres)
+                    foreach (Personnage membre in tableauequipe2[meilleurIndex].Membres)
                         equipeFusion.AjouterMembre(membre);
 
                     if (equipeFusion.EstValide(Probleme.SIMPLE))
@@ -77,6 +85,10 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
                     }
                 }
             }
+
+            stopwatch.Stop();
+            TempsExecution = stopwatch.ElapsedMilliseconds;
+
             return repartitionFinale;
         }
     }

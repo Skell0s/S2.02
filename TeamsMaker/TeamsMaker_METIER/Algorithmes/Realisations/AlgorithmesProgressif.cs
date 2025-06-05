@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,21 @@ using TeamsMaker_METIER.Problemes;
 
 namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    public class AlgorithmeExtremeEnPremier : Algorithme
+    public class AlgoProgressif : Algorithme
     {
+        /// <summary>
+        /// Algorithme de répartition des personnages en équipes de 4, en comparant les niveaux principaux sans prendre en compte les rôles.
+        /// </summary>
+        /// <param name="jeuTest"></param>
+        /// <returns></returns>
         public override Repartition Repartir(JeuTest jeuTest)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             Repartition AlgoPro = AlgorithmeProgressif(jeuTest);
             AlgoPro = SupprimerEquipeScoreEleve(AlgoPro, jeuTest);
+            stopwatch.Stop();
+            TempsExecution = stopwatch.ElapsedMilliseconds;
             return AlgoPro;
         }
 
@@ -31,12 +41,12 @@ namespace TeamsMaker_METIER.Algorithmes.Realisations
 
                 while (equipe.Membres.Length < 4)
                 {
-                    Personnage meilleurCandidat = null;
+                    Personnage? meilleurCandidat = null;
                     double meilleurEcart = double.MaxValue;
 
-                    foreach (var candidat in disponibles)
+                    foreach (Personnage candidat in disponibles)
                     {
-                        var tempMembres = new List<Personnage>(equipe.Membres);
+                        List<Personnage> tempMembres = new List<Personnage>(equipe.Membres);
                         tempMembres.Add(candidat);
 
                         double moyenne = tempMembres.Average(p => p.LvlPrincipal);

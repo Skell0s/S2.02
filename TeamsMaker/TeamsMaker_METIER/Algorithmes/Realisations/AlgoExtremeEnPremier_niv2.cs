@@ -8,21 +8,27 @@ using TeamsMaker_METIER.JeuxTest;
 using TeamsMaker_METIER.Personnages.Classes;
 using TeamsMaker_METIER.Personnages;
 
-namespace TeamsMaker_METIER.Algorithmes.AlgoTest
+namespace TeamsMaker_METIER.Algorithmes.Realisations
 {
-    internal class AlgoExtremeEnPremier_niv2 : Algorithme
+    public class AlgoExtremeEnPremier_niv2 : Algorithme
     {
+        /// <summary>
+        /// Algorithme de répartition des personnages en équipes de 4, en utilisant la méthode "Extrêmes en premier" niveau 2.
+        /// </summary>
+        /// <param name="jeuTest"></param>
+        /// <returns></returns>
+        /// 
         public override Repartition Repartir(JeuTest jeuTest)
         {
             Personnage[] personnages = jeuTest.Personnages;
-            Array.Sort(personnages, new ComparateurPersonnageParNiveauPrincipal());
             Repartition repartition = new Repartition(jeuTest);
 
             List<Personnage> tanks = new List<Personnage>();
             List<Personnage> supports = new List<Personnage>();
             List<Personnage> dps = new List<Personnage>();
 
-            foreach (var p in personnages)
+            //étape 1 : création des listes de personnages par rôle et tri croissant par niveau principal
+            foreach (Personnage p in personnages)
             {
                 switch (p.RolePrincipal)
                 {
@@ -40,7 +46,8 @@ namespace TeamsMaker_METIER.Algorithmes.AlgoTest
             int t = 0;
             int s = 0;
 
-            for (int i = 0; i <= personnages.Length - 4; i += 4)
+            // étape 2 : création des équipes en utilisant la méthode "Extrêmes en premier" avec les rôles principaux
+            while (t < tanks.Count && s < supports.Count && d - 1 >= 0)
             {
                 if (d != 0)
                 {
